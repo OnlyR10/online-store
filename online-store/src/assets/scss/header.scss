@@ -1,0 +1,20 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+    height: 100px;
+    border: 1px solid red;
+}
+.header__info {
+    align-self: center;
+    max-width: 50em;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+.header__img {
+    object-fit: contain;
+    width: 15em;
+    height: auto;
+}

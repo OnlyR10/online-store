@@ -1,0 +1,29 @@
+#footer {
+    display: flex;
+    justify-content: space-between;
+    grid-area: footer;
+    height: 10vw;
+    border: 1px solid gold;
+}
+
+.footer__info {
+    align-self: center;
+    width: 10em;
+    font-size: 1.6rem;
+}
+
+.footer__autor {
+    color: black;
+    text-decoration: none;
+}
+
+.footer__icon {
+    width: 15em;
+    min-height: 5em;
+    background-image: url(https://rs.school/images/rs_school_js.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: -9000px;
+    overflow: hidden;
+}

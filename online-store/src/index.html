@@ -7,6 +7,53 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="main">Hello World!</div>
+        <div id="container">
+            <div id="wrapper">
+                <header id="header">
+                    <p class="header__info">
+                        Дорогой книголюб, приветствуем на страницах нашей библиотеки! Она создана для тех кто, кто, как
+                        и мы любит читать и не мыслит «ни дня без строчки» (© Плиний Старший), чтобы вы могли без лишних
+                        усилий выбрать себе книгу по душе. Любите современных авторов или из старой доброй классики,
+                        скучаете по рифмованным строчкам или жаждете остросюжетного детектива – пожалуйста!
+                    </p>
+                    <img src="./assets/images/book.jpg" alt="Читатель" class="header__img" width="600" height="401" />
+                </header>
+
+                <section id="tools">
+                    <div class="tools__input">
+                        <input type="text" class="search-container" />
+                    </div>
+
+                    <div class="sort-container">
+                        <select name="sort" class="sort">
+                            <option>По имени ↑</option>
+                            <option>По имени ↓</option>
+                            <option>По году выхода на рынок ↑</option>
+                            <option>По году выхода на рынок ↓</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section id="filter">
+                    <div></div>
+                </section>
+
+                <main id="main">
+                    <div></div>
+                </main>
+
+                <aside id="basket">
+                    <div></div>
+                </aside>
+
+                <footer id="footer">
+                    <div class="footer__info">
+                        <a href="https://github.com/OnlyR10" class="footer__autor">@ OnlyR10</a>
+                        2022
+                    </div>
+                    <a href="https://rs.school/js/" class="footer__icon" target="_blank">Rolling Scopes School</a>
+                </footer>
+            </div>
+        </div>
     </body>
 </html>
