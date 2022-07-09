@@ -20,6 +20,14 @@ const baseConfig = {
                 test: /\.s[ac]ss$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
         ],
     },
     resolve: {
@@ -35,7 +43,7 @@ const baseConfig = {
             filename: 'index.html',
         }),
         new MiniCssExtractPlugin({
-            filename: './built.css',
+            filename: './style.css',
         }),
         new CleanWebpackPlugin(),
     ],
