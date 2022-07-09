@@ -1,3 +1,5 @@
 import './style.scss';
+import library from './ts/library';
 
-console.log('Hello World!');
+console.log(library.getBooks());
+console.log(library.getLibraryLength());
