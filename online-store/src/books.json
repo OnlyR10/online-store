@@ -2,378 +2,371 @@
     {
         "name": "Гарри Поттер и узник Азкабана",
         "releaseDateBook": 2019,
-        "image": "harryPotter",
+        "image": "harryPotter.jpg",
         "author": "Джоан Роулинг",
         "amount": 81
     },
     {
         "name": "Зелёная миля",
         "releaseDateBook": 2014,
-        "image": "greenMile",
+        "image": "greenMile.jpg",
         "author": "Стивен Кинг",
         "amount": 41
     },
     {
         "name": "Унесенные ветром",
         "releaseDateBook": 2020,
-        "image": "goneWiththeWind",
+        "image": "goneWiththeWind.jpg",
         "author": "Маргарет Митчелл",
         "amount": 45
     },
     {
         "name": "Шерлок Холмс",
         "releaseDateBook": 2019,
-        "image": "sherlockHolmes",
+        "image": "sherlockHolmes.jpg",
         "author": "Артур Конан Дойл",
         "amount": 7
     },
     {
         "name": "Свита короля",
         "releaseDateBook": 2021,
-        "image": "kingsRetinue",
+        "image": "kingsRetinue.jpg",
         "author": "Нора Сакавич",
         "amount": 9
     },
     {
         "name": "Прислуга",
         "releaseDateBook": 2016,
-        "image": "servant",
+        "image": "servant.jpg",
         "author": "Кэтрин Стокетт",
         "amount": 28
     },
     {
         "name": "Властелин Колец: Возвращение короля",
         "releaseDateBook": 2020,
-        "image": "lotr",
+        "image": "lotr.jpg",
         "author": "Джон Р. Р. Толкин",
         "amount": 20
     },
     {
         "name": "Граф Монте-Кристо",
         "releaseDateBook": 2017,
-        "image": "monteCristo",
+        "image": "monteCristo.jpg",
         "author": "Александр Дюма",
         "amount": 36
     },
     {
         "name": "Буря мечей",
         "releaseDateBook": 2008,
-        "image": "stormSwords",
+        "image": "stormSwords.jpg",
         "author": "Джордж Мартин",
         "amount": 20
     },
     {
         "name": "Вторая жизнь Уве",
         "releaseDateBook": 2016,
-        "image": "uwesSecondLife",
+        "image": "uwesSecondLife.jpg",
         "author": "Фредрик Бакман",
         "amount": 34
     },
     {
         "name": "Крестный отец",
         "releaseDateBook": 2002,
-        "image": "godfather",
+        "image": "godfather.jpg",
         "author": "Марио Пьюзо",
         "amount": 26
     },
     {
         "name": "О всех созданиях — больших и малых",
         "releaseDateBook": 2012,
-        "image": "allCreatures",
+        "image": "allCreatures.jpg",
         "author": "Джеймс Хэрриот",
         "amount": 5
     },
     {
         "name": "Пустая могила",
         "releaseDateBook": 2018,
-        "image": "emptygrave",
+        "image": "emptygrave.jpg",
         "author": "Джонатан Страуд",
         "amount": 6
     },
     {
         "name": "Продажное королевство",
         "releaseDateBook": 2018,
-        "image": "corruptKingdom",
+        "image": "corruptKingdom.jpg",
         "author": "Ли Бардуго",
         "amount": 15
     },
     {
         "name": "Тайная опора. Привязанность в жизни ребенка",
         "releaseDateBook": 2016,
-        "image": "secretSupport",
+        "image": "secretSupport.jpg",
         "author": "Людмила Петрановская",
         "amount": 7
     },
     {
         "name": "Десять негритят",
         "releaseDateBook": 2021,
-        "image": "tenLittleIndians",
+        "image": "tenLittleIndians.jpg",
         "author": "Агата Кристи",
         "amount": 43
     },
     {
         "name": "Цветы для Элджернона",
         "releaseDateBook": 2015,
-        "image": "flowersForAlgernon",
+        "image": "flowersForAlgernon.jpg",
         "author": "Дэниел Киз",
         "amount": 113
     },
     {
         "name": "Записки юного врача",
         "releaseDateBook": 2021,
-        "image": "notesYyoungDoctor",
+        "image": "notesYyoungDoctor.jpg",
         "author": "Михаил Булгаков",
         "amount": 18
     },
     {
         "name": "Побег из Шоушенка",
         "releaseDateBook": 2011,
-        "image": "shawshankRedemption",
+        "image": "shawshankRedemption.jpg",
         "author": "Стивен Кинг",
         "amount": 21
     },
     {
         "name": "Жажда жизни",
         "releaseDateBook": 2019,
-        "image": "lustForLife",
+        "image": "lustForLife.jpg",
         "author": "Ирвинг Стоун",
         "amount": 11
     },
     {
         "name": "Дары волхвов",
         "releaseDateBook": 2020,
-        "image": "giftsMagi",
+        "image": "giftsMagi.jpg",
         "author": "О. Генри",
         "amount": 16
     },
     {
         "name": "Убить пересмешника",
         "releaseDateBook": 2021,
-        "image": "killMockingbird",
+        "image": "killMockingbird.jpg",
         "author": "Харпер Ли",
         "amount": 70
     },
     {
         "name": "Двенадцать стульев. Золотой теленок (сборник)",
         "releaseDateBook": 2018,
-        "image": "twelveChairs",
+        "image": "twelveChairs.jpg",
         "author": "Илья Ильф, Евгений Петров",
         "amount": 13
     },
     {
         "name": "Тысяча сияющих солнц",
         "releaseDateBook": 2015,
-        "image": "thousandShiningSuns",
+        "image": "thousandShiningSuns.jpg",
         "author": "Халед Хоссейни",
         "amount": 18
     },
     {
         "name": "Крутой маршрут. Хроника времен культа личности",
         "releaseDateBook": 2017,
-        "image": "steepRoute",
+        "image": "steepRoute.jpg",
         "author": "Евгения Гинзбург",
         "amount": 3
     },
     {
         "name": "Книжный вор. Хроника времен культа личности",
         "releaseDateBook": 2021,
-        "image": "bookThief",
+        "image": "bookThief.jpg",
         "author": "Маркус Зусак",
         "amount": 43
     },
     {
         "name": "Искра жизни",
         "releaseDateBook": 2019,
-        "image": "sparkLife",
+        "image": "sparkLife.jpg",
         "author": "Эрих Мария Ремарк",
         "amount": 13
     },
     {
         "name": "Ученик убийцы. Королевский убийца (сборник)",
         "releaseDateBook": 2016,
-        "image": "assassinsApprentice",
+        "image": "assassinsApprentice.jpg",
         "author": "Робин Хобб",
         "amount": 5
     },
     {
         "name": "Безумный корабль",
         "releaseDateBook": 2017,
-        "image": "madShip",
+        "image": "madShip.jpg",
         "author": "Робин Хобб",
         "amount": 4
     },
     {
         "name": "Мастер и Маргарита",
         "releaseDateBook": 2013,
-        "image": "masterAndMargarita",
+        "image": "masterAndMargarita.jpg",
         "author": "Михаил Булгаков",
         "amount": 125
     },
     {
         "name": "Часодеи. Часовая битва",
         "releaseDateBook": 2015,
-        "image": "chasodei",
+        "image": "chasodei.jpg",
         "author": "Наталья Щерба",
         "amount": 8
     },
     {
         "name": "Отверженные",
         "releaseDateBook": 2020,
-        "image": "outcasts",
+        "image": "outcasts.jpg",
         "author": "Виктор Гюго",
         "amount": 16
     },
     {
         "name": "Два капитана",
         "releaseDateBook": 2017,
-        "image": "twoCaptainsasts",
+        "image": "twoCaptainsasts.jpg",
         "author": "Вениамин Каверин",
         "amount": 17
     },
     {
         "name": "Лабиринт Мёнина",
         "releaseDateBook": 2012,
-        "image": "meninMaze",
+        "image": "meninMaze.jpg",
         "author": "Макс Фрай",
         "amount": 7
     },
     {
         "name": "Меч Предназначения",
         "releaseDateBook": 2016,
-        "image": "swordDestiny",
+        "image": "swordDestiny.jpg",
         "author": "Анджей Сапковский",
         "amount": 24
     },
     {
         "name": "На Западном фронте без перемен",
         "releaseDateBook": 2021,
-        "image": "allQuietWesternFront",
+        "image": "allQuietWesternFront.jpg",
         "author": "Эрих Мария Ремарк",
         "amount": 35
     },
     {
         "name": "У войны не женское лицо",
         "releaseDateBook": 2019,
-        "image": "warFace",
+        "image": "warFace.jpg",
         "author": "Светлана Алексиевич",
         "amount": 7
     },
     {
         "name": "Мартин Иден",
         "releaseDateBook": 2021,
-        "image": "martinEden",
+        "image": "martinEden.jpg",
         "author": "Джек Лондон",
         "amount": 49
     },
     {
         "name": "Белый Бим Черное ухо",
         "releaseDateBook": 2021,
-        "image": "whiteBeam",
+        "image": "whiteBeam.jpg",
         "author": "Гавриил Троепольский",
         "amount": 13
     },
     {
         "name": "Записки о Шерлоке Холмсе (сборник)",
         "releaseDateBook": 2015,
-        "image": "notesSherlock",
+        "image": "notesSherlock.jpg",
         "author": "Артур Конан Дойл",
         "amount": 5
     },
     {
         "name": "Приключения Эмиля из Лённеберги (сборник)",
         "releaseDateBook": 2021,
-        "image": "emilsAdventures",
+        "image": "emilsAdventures.jpg",
         "author": "Астрид Линдгрен",
         "amount": 5
     },
     {
         "name": "Алмазная колесница",
         "releaseDateBook": 2016,
-        "image": "diamondChariot",
+        "image": "diamondChariot.jpg",
         "author": "Борис Акунин",
         "amount": 14
     },
     {
         "name": "Хранители",
         "releaseDateBook": 2016,
-        "image": "guardians",
+        "image": "guardians.jpg",
         "author": "Алан Мур, Дэйв Гиббонс",
         "amount": 4
     },
     {
-        "name": "11/22/63",
-        "releaseDateBook": 2021,
-        "image": "numbers",
-        "author": "Стивен Кинг",
-        "amount": 27
-    },
-    {
         "name": "Про Федота-стрельца, удалого молодца (сборник)",
         "releaseDateBook": 2010,
-        "image": "aboutFedoArcher",
+        "image": "aboutFedoArcher.jpg",
         "author": "Леонид Филатов",
         "amount": 6
     },
     {
         "name": "Убийство в \"Восточном экспрессе\". Немой свидетель (сборник)",
         "releaseDateBook": 2011,
-        "image": "murderOrientExpress",
+        "image": "murderOrientExpress.jpg",
         "author": "Агата Кристи",
         "amount": 33
     },
     {
         "name": "Белый клык",
         "releaseDateBook": 2014,
-        "image": "whiteFang",
+        "image": "whiteFang.jpg",
         "author": "Джек Лондон",
         "amount": 22
     },
     {
         "name": "Мисс Черити",
         "releaseDateBook": 2018,
-        "image": "missCharity",
+        "image": "missCharity.jpg",
         "author": "Мари-Од Мюрай",
         "amount": 4
     },
     {
         "name": "Волшебник Изумрудного города",
         "releaseDateBook": 2019,
-        "image": "wizardOz",
+        "image": "wizardOz.jpg",
         "author": "Александр Волков",
         "amount": 26
     },
     {
         "name": "Наваждения (сборник)",
         "releaseDateBook": 2020,
-        "image": "delusions",
+        "image": "delusions.jpg",
         "author": "Макс Фрай",
         "amount": 7
     },
     {
         "name": "Замок Броуди",
         "releaseDateBook": 2016,
-        "image": "brodyCastle",
+        "image": "brodyCastle.jpg",
         "author": "Арчибальд Кронин",
         "amount": 18
     },
     {
         "name": "Королевство гнева и тумана",
         "releaseDateBook": 2021,
-        "image": "kingdomWrath",
+        "image": "kingdomWrath.jpg",
         "author": "Сара Дж. Маас",
         "amount": 9
     },
     {
         "name": "Проклятый горн (сборник)",
         "releaseDateBook": 2014,
-        "image": "cursedHorn",
+        "image": "cursedHorn.jpg",
         "author": "Алексей Пехов",
         "amount": 4
     },
     {
         "name": "Маленький принц",
         "releaseDateBook": 2018,
-        "image": "littlePrince",
+        "image": "littlePrince.jpg",
         "author": "Антуан де Сент-Экзюпери",
         "amount": 90
     }

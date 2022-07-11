@@ -1,13 +1,11 @@
-import Book from './book';
-import books from '../books.json';
-
-class Library {
-    private library: Book[];
-    constructor(array: Book[] = []) {
+import { IBook } from './interfaces';
+export default class Library {
+    private library: IBook[];
+    constructor(array: IBook[] = []) {
         this.library = array;
     }
 
-    addBook(book: Book | Book[]): void {
+    addBook(book: IBook | IBook[]): void {
         if (Array.isArray(book)) {
             this.library = this.library.concat(book);
         } else {
@@ -16,7 +14,7 @@ class Library {
     }
 
     removeBook(bookName: string): void {
-        const bookNumber: number = this.library.findIndex((elem: Book): boolean => elem.name === bookName);
+        const bookNumber: number = this.library.findIndex((elem: IBook): boolean => elem.name === bookName);
         this.library.splice(bookNumber, 1);
     }
 
@@ -24,11 +22,7 @@ class Library {
         return this.library.length;
     }
 
-    getBooks(): Book[] {
+    getBooks(): IBook[] {
         return this.library;
     }
 }
-
-const library = new Library(books);
-
-export default library;
