@@ -5,7 +5,3 @@ export interface IBook {
     author: string;
     amount: number;
 }
-
-export interface IEvents {
-    [event: string]: Event;
-}

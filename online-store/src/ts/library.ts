@@ -23,6 +23,6 @@ export default class Library {
     }
 
     getBooks(): IBook[] {
-        return this.library;
+        return this.library.slice();
     }
 }

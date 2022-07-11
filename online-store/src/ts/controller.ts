@@ -8,7 +8,7 @@ export default class Controller {
         public input: HTMLInputElement,
         public select: HTMLSelectElement
     ) {
-        this.select.addEventListener('change', () => {
+        this.select.addEventListener('change', (): void => {
             switch (this.select.value) {
                 case 'nameAsc':
                     this.model.sort('name', 'asc');
@@ -28,7 +28,11 @@ export default class Controller {
             }
         });
 
-        document.addEventListener('booksSorted', () => {
+        this.input.addEventListener('input', (): void => {
+            this.model.search(this.input.value);
+        });
+
+        document.addEventListener('ModelUpdate', (): void => {
             this.view.update();
         });
     }
