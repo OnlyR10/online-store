@@ -1,0 +1,22 @@
+html {
+    font-size: 10px;
+}
+
+#container {
+    padding: 2em 5em;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 20vw 1fr 20vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'header header header'
+        'tools tools tools'
+        'filter main basket'
+        'footer footer footer';
+}
+
+.hidden {
+    display: none;
+}
