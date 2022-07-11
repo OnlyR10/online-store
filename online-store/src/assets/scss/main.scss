@@ -36,7 +36,7 @@
 .main__cart {
     width: 80%;
     height: 100%;
-    background-image: url(../icons/search.svg);
+    background-image: url(./assets/icons/cart-check.svg);
     background-repeat: no-repeat;
     position: absolute;
     top: 0;
@@ -54,7 +54,4 @@
     padding: 1em;
     margin: 0;
     box-sizing: border-box;
-}
-
-.list__item {
 }
