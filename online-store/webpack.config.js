@@ -5,6 +5,7 @@ const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const baseConfig = {
     entry: path.resolve(__dirname, './src/index.ts'),
@@ -46,6 +47,9 @@ const baseConfig = {
             filename: './style.css',
         }),
         new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [{ from: './src/assets/images/books', to: './books' }],
+        }),
     ],
 };
 
