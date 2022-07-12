@@ -24,14 +24,29 @@ export default class View {
         this.warning.classList.toggle('hidden', Boolean(books.length));
         for (let i = 0; i < books.length; i = i + 1) {
             const container: HTMLDivElement = document.createElement('div');
-            container.classList.add('basket__book-container');
-            container.innerHTML = /* html */ `
-                <div class="basket__remove-book"></div>
-                <div class="basket__book-name">${books[i].name}</div>
-            `;
+            container.classList.add('basket__container-book');
+            // container.innerHTML = /* html */ `
+            //     <div class="basket__container-book_remove"></div>
+            //     <div class="basket__container-book_name">${books[i].name}</div>
+            // `;
+
+            const bookRemove: HTMLDivElement = document.createElement('div');
+            bookRemove.classList.add('basket__container-book_remove');
+
+            const bookName: HTMLDivElement = document.createElement('div');
+            bookName.classList.add('basket__container-book_name');
+            bookName.textContent = `${books[i].name}`;
+
+            container.append(bookRemove);
+            container.append(bookName);
             basket.append(container);
             // const book: BookView = new BookView(books[i], this.model);
             // container.append(book.createBookInBasket());
+
+            bookRemove.addEventListener('click', () => {
+                container.remove();
+                this.model.removeFromBasket(books[i]);
+            });
         }
     }
 
