@@ -1,44 +1,49 @@
+import BookView from './bookView';
 import { IBook } from './interfaces';
 import Model from './model';
 
-const pathToBookImg = './books/';
-
 export default class View {
-    constructor(public model: Model, public container: HTMLDivElement) {
-        this.addBooksInContainer(container, this.model.books);
+    constructor(
+        public model: Model,
+        public booksContainer: HTMLDivElement,
+        public basketContainer: HTMLDivElement,
+        public warning: HTMLParagraphElement
+    ) {
+        this.addBooksToContainer(booksContainer, this.model.books);
+        this.addBookToBasket(basketContainer, this.model.basket);
     }
 
-    createBook(book: IBook): HTMLDivElement {
-        const container: HTMLDivElement = document.createElement('div');
-        container.classList.add('main__container');
-        container.innerHTML = /* html */ `
-            <div class="main__img-container">
-                <img src="${pathToBookImg}${book.image}" alt="${book.name}" width="200" height="305" class="main__img">
-                <div class="main-veil hidden"></div> 
-                <div class="main__cart hidden"></div> 
-            </div>
-            <div class="main__info-container">
-                <h3 class="list__item">${book.name}</h3>
-                <p class="list__item">Год издания: ${book.releaseDateBook}</p>
-                <p class="list__item">Автор: ${book.author}</p>
-                <p class="list__item">Количество книг на складе: ${book.amount}</p>
-            </div>
-        `;
-
-        return container;
-    }
-
-    addBooksInContainer(container: HTMLDivElement, books: IBook[]): void {
+    addBooksToContainer(container: HTMLDivElement, books: IBook[]): void {
         for (let i = 0; i < books.length; i = i + 1) {
-            container.append(this.createBook(books[i]));
+            const book: BookView = new BookView(books[i], this.model);
+            container.append(book.createBook());
+        }
+    }
+
+    addBookToBasket(basket: HTMLDivElement, books: IBook[]) {
+        this.warning.classList.toggle('hidden', Boolean(books.length));
+        for (let i = 0; i < books.length; i = i + 1) {
+            const container: HTMLDivElement = document.createElement('div');
+            container.classList.add('basket__book-container');
+            container.innerHTML = /* html */ `
+                <div class="basket__remove-book"></div>
+                <div class="basket__book-name">${books[i].name}</div>
+            `;
+            basket.append(container);
+            // const book: BookView = new BookView(books[i], this.model);
+            // container.append(book.createBookInBasket());
         }
     }
 
     update() {
-        while (this.container.lastChild) {
-            this.container.lastChild.remove();
+        while (this.booksContainer.lastChild) {
+            this.booksContainer.lastChild.remove();
+        }
+        while (this.basketContainer.lastChild) {
+            this.basketContainer.lastChild.remove();
         }
 
-        this.addBooksInContainer(this.container, this.model.books);
+        this.addBooksToContainer(this.booksContainer, this.model.books);
+        this.addBookToBasket(this.basketContainer, this.model.basket);
     }
 }

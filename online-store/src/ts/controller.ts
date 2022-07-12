@@ -5,8 +5,9 @@ export default class Controller {
     constructor(
         public model: Model,
         public view: View,
-        public input: HTMLInputElement,
-        public select: HTMLSelectElement
+        public main: HTMLDivElement,
+        public select: HTMLSelectElement,
+        public input: HTMLInputElement
     ) {
         this.select.addEventListener('change', (): void => {
             switch (this.select.value) {
