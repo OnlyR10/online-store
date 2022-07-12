@@ -1,57 +1,58 @@
-#main {
+.main {
     grid-area: main;
     display: grid;
     border: 1px solid black;
     row-gap: 2em;
     padding: 1em 3em;
-}
 
-.main__container {
-    display: flex;
-}
+    &__container {
+        display: flex;
+    }
 
-.main__img-container {
-    position: relative;
-    min-width: 25%;
-    display: flex;
-}
+    &__img-container {
+        position: relative;
+        min-width: 25%;
+        display: flex;
+        align-self: center;
+    }
 
-.main__img {
-    object-fit: contain;
-    width: 100%;
-    height: auto;
-}
+    &__img {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+    }
 
-.main-veil {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background-color: darkgray;
-    opacity: 0.8;
-}
+    &-veil {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: darkgray;
+        opacity: 0.8;
+    }
 
-.main__cart {
-    width: 80%;
-    height: 100%;
-    background-image: url(./assets/icons/cart-check.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    transform: translate(15%, 25%);
-}
+    &__cart {
+        width: 80%;
+        height: 100%;
+        background-image: url(./assets/icons/cart-check.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transform: translate(15%, 25%);
+    }
 
-.main__info-container {
-    width: 100%;
-    height: 100%;
-    font-size: 2.2rem;
-    font-family: 'Roboto', sans-serif;
-    list-style-type: none;
-    padding: 1em;
-    margin: 0;
-    box-sizing: border-box;
+    &__info-container {
+        width: 100%;
+        height: 100%;
+        font-size: 2.2rem;
+        font-family: 'Roboto', sans-serif;
+        list-style-type: none;
+        padding: 1em;
+        margin: 0;
+        box-sizing: border-box;
+    }
 }
