@@ -3,9 +3,8 @@ import type Library from './library';
 
 export default class Model {
     private _books: IBook[] = this.library.getBooks();
-    private selectKey: 'name' | 'releaseDateBook' | null;
-    private selectMethod: 'asc' | 'desc' | null;
-    basket: IBook[];
+    private _basket: IBook[] = [];
+    public basketFull = false;
 
     constructor(private library: Library) {
         this.selectKey = null;
@@ -17,13 +16,24 @@ export default class Model {
         return this._books.slice();
     }
 
+    get basket() {
+        return this._basket.slice();
+    }
+
     addToBasket(book: IBook) {
-        this.basket.push(book);
+        if (this.basket.length < 2) {
+            this._basket.push(book);
+        } else {
+            this.basketFull = true;
+        }
         document.dispatchEvent(new Event('ModelUpdate'));
     }
 
     removeFromBasket(book: IBook) {
-        this.basket.splice(this.basket.indexOf(book), 1);
+        if (this.basket.length === 2) {
+            this.basketFull = false;
+        }
+        this._basket.splice(this._basket.indexOf(book), 1);
         document.dispatchEvent(new Event('ModelUpdate'));
     }
 

@@ -5,9 +5,12 @@ import Model from './model';
 export default class View {
     constructor(
         public model: Model,
+        public body: HTMLBodyElement,
         public booksContainer: HTMLDivElement,
         public basketContainer: HTMLDivElement,
-        public warning: HTMLParagraphElement
+        public basketEmptyWarning: HTMLParagraphElement,
+        public veil: HTMLDivElement,
+        public basketFullWarning: HTMLDivElement
     ) {
         this.addBooksToContainer(booksContainer, this.model.books);
         this.addBookToBasket(basketContainer, this.model.basket);
@@ -21,16 +24,12 @@ export default class View {
     }
 
     addBookToBasket(basket: HTMLDivElement, books: IBook[]) {
-        this.warning.classList.toggle('hidden', Boolean(books.length));
+        this.basketEmptyWarning.classList.toggle('hidden', Boolean(books.length));
         for (let i = 0; i < books.length; i = i + 1) {
             const container: HTMLDivElement = document.createElement('div');
             container.classList.add('basket__container-book');
-            // container.innerHTML = /* html */ `
-            //     <div class="basket__container-book_remove"></div>
-            //     <div class="basket__container-book_name">${books[i].name}</div>
-            // `;
 
-            const bookRemove: HTMLDivElement = document.createElement('div');
+            const bookRemove: HTMLButtonElement = document.createElement('button');
             bookRemove.classList.add('basket__container-book_remove');
 
             const bookName: HTMLDivElement = document.createElement('div');
@@ -40,8 +39,6 @@ export default class View {
             container.append(bookRemove);
             container.append(bookName);
             basket.append(container);
-            // const book: BookView = new BookView(books[i], this.model);
-            // container.append(book.createBookInBasket());
 
             bookRemove.addEventListener('click', () => {
                 container.remove();
@@ -57,7 +54,11 @@ export default class View {
         while (this.basketContainer.lastChild) {
             this.basketContainer.lastChild.remove();
         }
-
+        if (this.model.basketFull) {
+            this.body.classList.add('fix');
+            this.veil.classList.add('veil__darken');
+            this.basketFullWarning.classList.remove('hidden');
+        }
         this.addBooksToContainer(this.booksContainer, this.model.books);
         this.addBookToBasket(this.basketContainer, this.model.basket);
     }

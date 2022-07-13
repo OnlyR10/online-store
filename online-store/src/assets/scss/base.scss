@@ -20,3 +20,49 @@ html {
 .hidden {
     display: none;
 }
+
+.fix {
+    overflow: hidden;
+    padding-right: 17px;
+}
+
+.veil__darken {
+    background: rgba(41, 41, 41, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.warning {
+    background-color: red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 30vw;
+    z-index: 10;
+}
+
+.warning__cross {
+    background-image: url(./assets/icons/crossForModal.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.warning__info {
+    text-align: center;
+    line-height: 30vw;
+    font-size: 4rem;
+    user-select: none;
+}
