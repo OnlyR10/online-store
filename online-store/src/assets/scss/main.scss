@@ -22,7 +22,7 @@
         height: auto;
     }
 
-    &-veil {
+    &__veil {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -54,5 +54,9 @@
         padding: 1em;
         margin: 0;
         box-sizing: border-box;
+    }
+
+    &__warning {
+        color: red;
     }
 }
