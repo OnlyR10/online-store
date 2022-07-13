@@ -8,12 +8,7 @@ import books from './books.json';
 const body = document.querySelector('.body') as HTMLBodyElement;
 const tools = document.querySelector('.tools') as HTMLTableSectionElement;
 const main = document.querySelector('.main') as HTMLDivElement;
-
-const basket = document.querySelector('.basket__container') as HTMLDivElement;
-const warningMessage = document.querySelector('.basket-warning') as HTMLDivElement;
-
-const select = document.querySelector('.tools__sort') as HTMLSelectElement;
-const input = document.querySelector('#search') as HTMLInputElement;
+const basket = document.querySelector('.basket') as HTMLDivElement;
 
 const veil = document.querySelector('.veil') as HTMLDivElement;
 const warning = document.querySelector('.warning') as HTMLDivElement;

@@ -30,12 +30,13 @@
 
             &_remove {
                 width: 2rem;
-                height: auto;
+                height: 2rem;
                 background-image: url(./assets/icons/cross.svg);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
                 cursor: pointer;
+                align-self: center;
             }
 
             &_name {
