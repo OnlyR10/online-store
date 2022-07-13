@@ -12,7 +12,7 @@ export default class BookView {
         container.innerHTML = /* html */ `
           <div class="main__img-container">
               <img src="${pathToBookImg}${this.book.image}" alt="${this.book.name}" width="200" height="305" class="main__img">
-              <div class="main-veil hidden"></div> 
+              <div class="main__veil hidden"></div> 
               <div class="main__cart hidden"></div> 
           </div>
           <div class="main__info-container">

@@ -1,14 +1,17 @@
 import BasketView from './basketView';
-import { IBook } from './interfaces';
+import BookLibrary from './bookLibrary';
 import Model from './model';
 import ToolsView from './toolsView';
 
 export default class View {
     toolsView: ToolsView;
     basketView: BasketView;
+    bookLibrary: BookLibrary;
+
     constructor(
         public model: Model,
         public body: HTMLBodyElement,
+        public main: HTMLDivElement,
         public basket: HTMLElement,
         public veil: HTMLDivElement,
         public basketFullWarning: HTMLDivElement,
@@ -16,6 +19,7 @@ export default class View {
     ) {
         this.toolsView = new ToolsView(this.model, this.toolsContainer);
         this.basketView = new BasketView(this.model, this.basket);
+        this.bookLibrary = new BookLibrary(this.model, this.main);
     }
 
     update(eventName: string): void {
@@ -29,5 +33,10 @@ export default class View {
                 }
                 this.basketView.update();
                 break;
+            case 'sort':
+            case 'search':
+                this.bookLibrary.update();
+                break;
+        }
     }
 }
