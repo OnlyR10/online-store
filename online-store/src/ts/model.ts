@@ -3,14 +3,12 @@ import type Library from './library';
 
 export default class Model {
     private _books: IBook[] = this.library.getBooks();
+    private selectKey: 'name' | 'releaseDateBook' | null = null;
+    private selectMethod: 'asc' | 'desc' | null = null;
     private _basket: IBook[] = [];
     public basketFull = false;
 
-    constructor(private library: Library) {
-        this.selectKey = null;
-        this.selectMethod = null;
-        this.basket = [];
-    }
+    constructor(private library: Library) {}
 
     get books() {
         return this._books.slice();

@@ -1,9 +1,6 @@
 import { IBook } from './interfaces';
 export default class Library {
-    private library: IBook[];
-    constructor(array: IBook[] = []) {
-        this.library = array;
-    }
+    constructor(private library: IBook[] = []) {}
 
     addBook(book: IBook | IBook[]): void {
         if (Array.isArray(book)) {

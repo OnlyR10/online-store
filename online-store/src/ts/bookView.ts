@@ -4,13 +4,7 @@ import type Model from './model';
 const pathToBookImg = './books/';
 
 export default class BookView {
-    book: IBook;
-    model: Model;
-
-    constructor(book: IBook, model: Model) {
-        this.book = book;
-        this.model = model;
-    }
+    constructor(private book: IBook, private model: Model) {}
 
     createBook(): HTMLDivElement {
         const container: HTMLDivElement = document.createElement('div');
@@ -39,14 +33,4 @@ export default class BookView {
 
         return container;
     }
-
-    // createBookInBasket(): HTMLDivElement {
-    //     const container: HTMLDivElement = document.createElement('div');
-    //     container.classList.add('basket__container-book');
-    //     container.innerHTML = /* html */ `
-    //         <div class="basket__remove-book"></div>
-    //         <div class="basket__container-book_name">${this.book.name}</div>
-    //     `;
-    //     return container;
-    // }
 }
