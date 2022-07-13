@@ -1,8 +1,10 @@
 import BookView from './bookView';
 import { IBook } from './interfaces';
 import Model from './model';
+import ToolsView from './toolsView';
 
 export default class View {
+    toolsView: ToolsView;
     constructor(
         public model: Model,
         public body: HTMLBodyElement,
@@ -10,10 +12,9 @@ export default class View {
         public basketContainer: HTMLDivElement,
         public basketEmptyWarning: HTMLParagraphElement,
         public veil: HTMLDivElement,
-        public basketFullWarning: HTMLDivElement
+        public toolsContainer: HTMLTableSectionElement
     ) {
-        this.addBooksToContainer(booksContainer, this.model.books);
-        this.addBookToBasket(basketContainer, this.model.basket);
+        this.toolsView = new ToolsView(this.model, this.toolsContainer);
     }
 
     addBooksToContainer(container: HTMLDivElement, books: IBook[]): void {

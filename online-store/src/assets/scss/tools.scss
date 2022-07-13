@@ -1,4 +1,4 @@
-#tools {
+.tools {
     grid-area: tools;
     height: 4vw;
     border: 1px solid yellow;
@@ -21,17 +21,6 @@
     margin-right: 20px;
 }
 
-.tools__search {
-    width: 60%;
-    height: 2vw;
-    font-size: 3rem;
-    font-family: 'Roboto', sans-serif;
-    padding: 0 2%;
-    border: 1px solid #616161;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
 .tools__icon-container {
     width: 6%;
     height: 2.5vw;
@@ -46,11 +35,43 @@
     background-repeat: no-repeat;
 }
 
+.tools__input-search {
+    position: relative;
+    width: 60%;
+    height: 2vw;
+    display: flex;
+}
+
+.tools__search {
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 2%;
+    border: 1px solid #616161;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.tools__cross-button {
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    background-image: url(./assets/icons/crossForModal.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    background-color: transparent;
+    right: 10px;
+}
+
 .tools__sort-container {
     grid-area: sort;
     justify-self: center;
     align-self: center;
     width: 70%;
+    height: 2vw;
 }
 
 .tools__sort {
@@ -62,6 +83,7 @@
     border: 1px solid #616161;
     border-radius: 10px;
     text-align: end;
+    cursor: pointer;
 }
 
 .tools__sort-item {

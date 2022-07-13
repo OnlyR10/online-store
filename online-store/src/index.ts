@@ -6,6 +6,7 @@ import Library from './ts/library';
 import books from './books.json';
 
 const body = document.querySelector('.body') as HTMLBodyElement;
+const tools = document.querySelector('.tools') as HTMLTableSectionElement;
 const main = document.querySelector('.main') as HTMLDivElement;
 
 const basket = document.querySelector('.basket__container') as HTMLDivElement;

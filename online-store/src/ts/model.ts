@@ -1,14 +1,14 @@
 import type { IBook } from './interfaces';
-import type Library from './library';
 
 export default class Model {
-    private _books: IBook[] = this.library.getBooks();
+    private _books: IBook[] = this.bookLibrary;
     private selectKey: 'name' | 'releaseDateBook' | null = null;
     private selectMethod: 'asc' | 'desc' | null = null;
     private _basket: IBook[] = [];
     public basketFull = false;
+    public searchMatch = true;
 
-    constructor(private library: Library) {}
+    constructor(private bookLibrary: IBook[]) {}
 
     get books() {
         return this._books.slice();
@@ -24,7 +24,11 @@ export default class Model {
         } else {
             this.basketFull = true;
         }
-        document.dispatchEvent(new Event('ModelUpdate'));
+        document.dispatchEvent(
+            new CustomEvent('ModelUpdate', {
+                detail: 'add',
+            })
+        );
     }
 
     removeFromBasket(book: IBook) {
@@ -32,7 +36,11 @@ export default class Model {
             this.basketFull = false;
         }
         this._basket.splice(this._basket.indexOf(book), 1);
-        document.dispatchEvent(new Event('ModelUpdate'));
+        document.dispatchEvent(
+            new CustomEvent('ModelUpdate', {
+                detail: 'remove',
+            })
+        );
     }
 
     sort(key: 'name' | 'releaseDateBook', method: 'asc' | 'desc'): void {
@@ -59,19 +67,31 @@ export default class Model {
         }
         this.selectKey = key;
         this.selectMethod = method;
-        document.dispatchEvent(new Event('ModelUpdate'));
+        document.dispatchEvent(
+            new CustomEvent('ModelUpdate', {
+                detail: 'sort',
+            })
+        );
     }
 
     search(inputValue: string): void {
-        const allBooks: IBook[] = this.library.getBooks();
+        const allBooks: IBook[] = this.bookLibrary;
         if (!inputValue) {
             this._books = allBooks;
         } else {
-            this._books = allBooks.filter((el: IBook): boolean => el.name.includes(inputValue));
+            this._books = allBooks.filter((el: IBook): boolean =>
+                el.name.toLowerCase().includes(inputValue.toLowerCase())
+            );
         }
+        this.searchMatch = Boolean(this._books.length);
         if (this.selectKey && this.selectMethod) {
             this.sort(this.selectKey, this.selectMethod);
+        } else {
+            document.dispatchEvent(
+                new CustomEvent('ModelUpdate', {
+                    detail: 'search',
+                })
+            );
         }
-        document.dispatchEvent(new Event('ModelUpdate'));
     }
 }
