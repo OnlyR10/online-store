@@ -9,10 +9,12 @@ export default class BasketView {
 
     constructor(public model: Model, public basket: HTMLElement) {
         this.basket.innerHTML = /* HTML */ `
-            <h2 class="basket-header">Корзина</h2>
-            <p class="basket-counter">0</p>
-            <p class="basket-warning">Ваша корзина пуста!</p>
-            <div class="basket__container"></div>
+            <div class="basket-wrapper">
+                <p class="basket-header">Корзина</p>
+                <p class="basket-counter">0</p>
+                <p class="basket-warning">Ваша корзина пуста!</p>
+                <div class="basket__container"></div>
+            </div>
         `;
 
         this.basketCounter = this.basket.querySelector('.basket-counter') as HTMLParagraphElement;
