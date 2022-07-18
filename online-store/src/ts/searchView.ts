@@ -16,6 +16,7 @@ export default class SearchView {
                     id="search"
                     type="text"
                     class="tools__search"
+                    maxlength="20"
                     placeholder="Искать..."
                     autofocus
                     autocomplete="off"
