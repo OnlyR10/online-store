@@ -8,6 +8,9 @@
         padding: 2rem 1rem;
         row-gap: 2rem;
     }
+    @include media-mobile {
+        padding: 1rem 0;
+    }
 
     &__book-container {
         display: flex;
@@ -62,6 +65,9 @@
         @include media-tablet {
             padding: 1rem 1.5rem;
         }
+        @include media-mobile {
+            padding: 0 1rem;
+        }
     }
 
     &__info-header {
@@ -73,6 +79,9 @@
         }
         @include media-tablet {
             font-size: 2.5rem;
+        }
+        @include media-mobile {
+            font-size: 2rem;
         }
     }
 
@@ -86,6 +95,9 @@
         @include media-tablet {
             font-size: 1.8rem;
         }
+        @include media-mobile {
+            font-size: 1.5rem;
+        }
     }
 
     &__warning {
@@ -93,6 +105,9 @@
         justify-self: center;
         @include media-desktop {
             font-size: 2.5rem;
+        }
+        @include media-mobile {
+            font-size: 2rem;
         }
     }
 }

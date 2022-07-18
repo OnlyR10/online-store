@@ -30,6 +30,9 @@
     @include media-desktop {
         font-size: 1.9rem;
     }
+    @include media-mobile {
+        font-size: 1.5rem;
+    }
 }
 
 .header__img {
@@ -38,5 +41,8 @@
     height: auto;
     @include media-desktop {
         width: 15%;
+    }
+    @include media-mobile {
+        display: none;
     }
 }

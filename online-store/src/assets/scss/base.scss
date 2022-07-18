@@ -21,6 +21,9 @@ body {
     @include media-tablet {
         grid-template-columns: 25vw 1fr 25vw;
     }
+    @include media-mobile {
+        grid-template-columns: 20vw 1fr 25vw;
+    }
 }
 
 .hidden {
@@ -57,6 +60,9 @@ body {
     @include media-tablet {
         height: 30%;
     }
+    @include media-mobile {
+        width: 60%;
+    }
 }
 
 .warning__cross {
@@ -64,8 +70,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     right: 0;
     position: absolute;
     cursor: pointer;
@@ -78,5 +84,8 @@ body {
     align-self: center;
     @include media-tablet {
         font-size: 3rem;
+    }
+    @include media-mobile {
+        font-size: 2.5rem;
     }
 }

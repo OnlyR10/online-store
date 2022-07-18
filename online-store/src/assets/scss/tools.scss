@@ -32,6 +32,9 @@
     width: 4rem;
     height: 4rem;
     margin-right: 1rem;
+    @include media-mobile {
+        display: none;
+    }
 }
 
 .tools__search-icon {
@@ -56,6 +59,10 @@
     border: 1px solid #616161;
     border-radius: 1rem;
     box-sizing: border-box;
+    padding-right: 4rem;
+    @include media-mobile {
+        font-size: 2rem;
+    }
 }
 
 .tools__cross-button {
@@ -88,4 +95,8 @@
     border-radius: 1rem;
     text-align: end;
     cursor: pointer;
+    @include media-mobile {
+        height: 100%;
+        font-size: 2rem;
+    }
 }
