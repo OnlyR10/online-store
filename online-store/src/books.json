@@ -4,370 +4,529 @@
         "releaseDateBook": 2019,
         "image": "harryPotter.jpg",
         "author": "Джоан Роулинг",
-        "amount": 81
+        "amount": 81,
+        "genre": "фэнтези",
+        "price": 491,
+        "rating": 4.8
     },
     {
         "name": "Зелёная миля",
         "releaseDateBook": 2014,
         "image": "greenMile.jpg",
         "author": "Стивен Кинг",
-        "amount": 41
+        "amount": 41,
+        "genre": "драма",
+        "price": 934,
+        "rating": 4.7
     },
     {
         "name": "Унесенные ветром",
         "releaseDateBook": 2020,
         "image": "goneWiththeWind.jpg",
         "author": "Маргарет Митчелл",
-        "amount": 45
+        "amount": 45,
+        "genre": "роман",
+        "price": 825,
+        "rating": 4.7
     },
     {
         "name": "Шерлок Холмс",
         "releaseDateBook": 2019,
         "image": "sherlockHolmes.jpg",
         "author": "Артур Конан Дойл",
-        "amount": 7
+        "amount": 7,
+        "genre": "детектив",
+        "price": 1000,
+        "rating": 4.8
     },
     {
         "name": "Свита короля",
         "releaseDateBook": 2021,
         "image": "kingsRetinue.jpg",
         "author": "Нора Сакавич",
-        "amount": 9
+        "amount": 9,
+        "genre": "фэнтези",
+        "price": 188,
+        "rating": 4.8
     },
     {
         "name": "Прислуга",
         "releaseDateBook": 2016,
         "image": "servant.jpg",
         "author": "Кэтрин Стокетт",
-        "amount": 28
+        "amount": 28,
+        "genre": "роман",
+        "price": 2000,
+        "rating": 4.7
     },
     {
         "name": "Властелин Колец: Возвращение короля",
         "releaseDateBook": 2020,
         "image": "lotr.jpg",
         "author": "Джон Р. Р. Толкин",
-        "amount": 20
+        "amount": 20,
+        "genre": "фэнтези",
+        "price": 134,
+        "rating": 4.7
     },
     {
         "name": "Граф Монте-Кристо",
         "releaseDateBook": 2017,
         "image": "monteCristo.jpg",
         "author": "Александр Дюма",
-        "amount": 36
+        "amount": 36,
+        "genre": "роман",
+        "price": 499,
+        "rating": 4.7
     },
     {
         "name": "Буря мечей",
         "releaseDateBook": 2008,
         "image": "stormSwords.jpg",
         "author": "Джордж Мартин",
-        "amount": 20
+        "amount": 20,
+        "genre": "фэнтези",
+        "price": 236,
+        "rating": 4.7
     },
     {
         "name": "Вторая жизнь Уве",
         "releaseDateBook": 2016,
         "image": "uwesSecondLife.jpg",
         "author": "Фредрик Бакман",
-        "amount": 34
+        "amount": 34,
+        "genre": "драма",
+        "price": 368,
+        "rating": 4.8
     },
     {
         "name": "Крестный отец",
         "releaseDateBook": 2002,
         "image": "godfather.jpg",
         "author": "Марио Пьюзо",
-        "amount": 26
+        "amount": 26,
+        "genre": "драма",
+        "price": 2000,
+        "rating": 4.6
     },
     {
         "name": "О всех созданиях — больших и малых",
         "releaseDateBook": 2012,
         "image": "allCreatures.jpg",
         "author": "Джеймс Хэрриот",
-        "amount": 5
+        "amount": 5,
+        "genre": "детектив",
+        "price": 568,
+        "rating": 4.2
     },
     {
         "name": "Пустая могила",
         "releaseDateBook": 2018,
         "image": "emptygrave.jpg",
         "author": "Джонатан Страуд",
-        "amount": 6
+        "amount": 6,
+        "genre": "фэнтези",
+        "price": 666,
+        "rating": 4.3
     },
     {
         "name": "Продажное королевство",
         "releaseDateBook": 2018,
         "image": "corruptKingdom.jpg",
         "author": "Ли Бардуго",
-        "amount": 15
+        "amount": 15,
+        "genre": "детектив",
+        "price": 289,
+        "rating": 4.0
     },
     {
         "name": "Тайная опора. Привязанность в жизни ребенка",
         "releaseDateBook": 2016,
         "image": "secretSupport.jpg",
         "author": "Людмила Петрановская",
-        "amount": 7
+        "amount": 7,
+        "genre": "роман",
+        "price": 792,
+        "rating": 3.8
     },
     {
         "name": "Десять негритят",
         "releaseDateBook": 2021,
         "image": "tenLittleIndians.jpg",
         "author": "Агата Кристи",
-        "amount": 43
+        "amount": 43,
+        "genre": "новелла",
+        "price": 210,
+        "rating": 4.2
     },
     {
         "name": "Цветы для Элджернона",
         "releaseDateBook": 2015,
         "image": "flowersForAlgernon.jpg",
         "author": "Дэниел Киз",
-        "amount": 113
+        "amount": 113,
+        "genre": "рассказ",
+        "price": 311,
+        "rating": 4.4
     },
     {
         "name": "Записки юного врача",
         "releaseDateBook": 2021,
         "image": "notesYyoungDoctor.jpg",
         "author": "Михаил Булгаков",
-        "amount": 18
+        "amount": 18,
+        "genre": "роман",
+        "price": 843,
+        "rating": 4.1
     },
     {
         "name": "Побег из Шоушенка",
         "releaseDateBook": 2011,
         "image": "shawshankRedemption.jpg",
         "author": "Стивен Кинг",
-        "amount": 21
+        "amount": 21,
+        "genre": "драма",
+        "price": 211,
+        "rating": 4.6
     },
     {
         "name": "Жажда жизни",
         "releaseDateBook": 2019,
         "image": "lustForLife.jpg",
         "author": "Ирвинг Стоун",
-        "amount": 11
+        "amount": 11,
+        "genre": "роман",
+        "price": 333,
+        "rating": 4.7
     },
     {
         "name": "Дары волхвов",
         "releaseDateBook": 2020,
         "image": "giftsMagi.jpg",
         "author": "О. Генри",
-        "amount": 16
+        "amount": 16,
+        "genre": "новелла",
+        "price": 168,
+        "rating": 4.6
     },
     {
         "name": "Убить пересмешника",
         "releaseDateBook": 2021,
         "image": "killMockingbird.jpg",
         "author": "Харпер Ли",
-        "amount": 70
+        "amount": 70,
+        "genre": "роман",
+        "price": 641,
+        "rating": 4.9
     },
     {
         "name": "Двенадцать стульев. Золотой теленок (сборник)",
         "releaseDateBook": 2018,
         "image": "twelveChairs.jpg",
         "author": "Илья Ильф, Евгений Петров",
-        "amount": 13
+        "amount": 13,
+        "genre": "роман",
+        "price": 489,
+        "rating": 4.3
     },
     {
         "name": "Тысяча сияющих солнц",
         "releaseDateBook": 2015,
         "image": "thousandShiningSuns.jpg",
         "author": "Халед Хоссейни",
-        "amount": 18
+        "amount": 18,
+        "genre": "роман",
+        "price": 463,
+        "rating": 4.5
     },
     {
         "name": "Крутой маршрут. Хроника времен культа личности",
         "releaseDateBook": 2017,
         "image": "steepRoute.jpg",
         "author": "Евгения Гинзбург",
-        "amount": 3
+        "amount": 3,
+        "genre": "роман",
+        "price": 911,
+        "rating": 4.6
     },
     {
         "name": "Книжный вор. Хроника времен культа личности",
         "releaseDateBook": 2021,
         "image": "bookThief.jpg",
         "author": "Маркус Зусак",
-        "amount": 43
+        "amount": 43,
+        "genre": "драма",
+        "price": 891,
+        "rating": 4.1
     },
     {
         "name": "Искра жизни",
         "releaseDateBook": 2019,
         "image": "sparkLife.jpg",
         "author": "Эрих Мария Ремарк",
-        "amount": 13
+        "amount": 13,
+        "genre": "роман",
+        "price": 313,
+        "rating": 4.1
     },
     {
         "name": "Ученик убийцы. Королевский убийца (сборник)",
         "releaseDateBook": 2016,
         "image": "assassinsApprentice.jpg",
         "author": "Робин Хобб",
-        "amount": 5
+        "amount": 5,
+        "genre": "фэнтези",
+        "price": 651,
+        "rating": 4.2
     },
     {
         "name": "Безумный корабль",
         "releaseDateBook": 2017,
         "image": "madShip.jpg",
         "author": "Робин Хобб",
-        "amount": 4
+        "amount": 4,
+        "genre": "фэнтези",
+        "price": 431,
+        "rating": 4.4
     },
     {
         "name": "Мастер и Маргарита",
         "releaseDateBook": 2013,
         "image": "masterAndMargarita.jpg",
         "author": "Михаил Булгаков",
-        "amount": 125
+        "amount": 125,
+        "genre": "роман",
+        "price": 645,
+        "rating": 4.2
     },
     {
         "name": "Часодеи. Часовая битва",
         "releaseDateBook": 2015,
         "image": "chasodei.jpg",
         "author": "Наталья Щерба",
-        "amount": 8
+        "amount": 8,
+        "genre": "роман",
+        "price": 435,
+        "rating": 4.2
     },
     {
         "name": "Отверженные",
         "releaseDateBook": 2020,
         "image": "outcasts.jpg",
         "author": "Виктор Гюго",
-        "amount": 16
+        "amount": 16,
+        "genre": "роман",
+        "price": 534,
+        "rating": 4.8
     },
     {
         "name": "Два капитана",
         "releaseDateBook": 2017,
         "image": "twoCaptainsasts.jpg",
         "author": "Вениамин Каверин",
-        "amount": 17
+        "amount": 17,
+        "genre": "роман",
+        "price": 1001,
+        "rating": 4.3
     },
     {
         "name": "Лабиринт Мёнина",
         "releaseDateBook": 2012,
         "image": "meninMaze.jpg",
         "author": "Макс Фрай",
-        "amount": 7
+        "amount": 7,
+        "genre": "фэнтези",
+        "price": 253,
+        "rating": 4.3
     },
     {
         "name": "Меч Предназначения",
         "releaseDateBook": 2016,
         "image": "swordDestiny.jpg",
         "author": "Анджей Сапковский",
-        "amount": 24
+        "amount": 24,
+        "genre": "фэнтези",
+        "price": 332,
+        "rating": 4.0
     },
     {
         "name": "На Западном фронте без перемен",
         "releaseDateBook": 2021,
         "image": "allQuietWesternFront.jpg",
         "author": "Эрих Мария Ремарк",
-        "amount": 35
+        "amount": 35,
+        "genre": "роман",
+        "price": 431,
+        "rating": 3.8
     },
     {
         "name": "У войны не женское лицо",
         "releaseDateBook": 2019,
         "image": "warFace.jpg",
         "author": "Светлана Алексиевич",
-        "amount": 7
+        "amount": 7,
+        "genre": "нонфикшен",
+        "price": 253,
+        "rating": 4.1
     },
     {
         "name": "Мартин Иден",
         "releaseDateBook": 2021,
         "image": "martinEden.jpg",
         "author": "Джек Лондон",
-        "amount": 49
+        "amount": 49,
+        "genre": "драма",
+        "price": 521,
+        "rating": 4.0
     },
     {
         "name": "Белый Бим Черное ухо",
         "releaseDateBook": 2021,
         "image": "whiteBeam.jpg",
         "author": "Гавриил Троепольский",
-        "amount": 13
+        "amount": 13,
+        "genre": "повесть",
+        "price": 463,
+        "rating": 4.5
     },
     {
         "name": "Записки о Шерлоке Холмсе (сборник)",
         "releaseDateBook": 2015,
         "image": "notesSherlock.jpg",
         "author": "Артур Конан Дойл",
-        "amount": 5
+        "amount": 5,
+        "genre": "детектив",
+        "price": 894,
+        "rating": 4.8
     },
     {
         "name": "Приключения Эмиля из Лённеберги (сборник)",
         "releaseDateBook": 2021,
         "image": "emilsAdventures.jpg",
         "author": "Астрид Линдгрен",
-        "amount": 5
+        "amount": 5,
+        "genre": "роман",
+        "price": 125,
+        "rating": 4.2
     },
     {
         "name": "Алмазная колесница",
         "releaseDateBook": 2016,
         "image": "diamondChariot.jpg",
         "author": "Борис Акунин",
-        "amount": 14
+        "amount": 14,
+        "genre": "детектив",
+        "price": 648,
+        "rating": 4.8
     },
     {
         "name": "Хранители",
         "releaseDateBook": 2016,
         "image": "guardians.jpg",
         "author": "Алан Мур, Дэйв Гиббонс",
-        "amount": 4
+        "amount": 4,
+        "genre": "роман",
+        "price": 1251,
+        "rating": 4.3
     },
     {
         "name": "Про Федота-стрельца, удалого молодца (сборник)",
         "releaseDateBook": 2010,
         "image": "aboutFedoArcher.jpg",
         "author": "Леонид Филатов",
-        "amount": 6
+        "amount": 6,
+        "genre": "сказка",
+        "price": 654,
+        "rating": 4.6
     },
     {
         "name": "Убийство в \"Восточном экспрессе\". Немой свидетель (сборник)",
         "releaseDateBook": 2011,
         "image": "murderOrientExpress.jpg",
         "author": "Агата Кристи",
-        "amount": 33
+        "amount": 33,
+        "genre": "роман",
+        "price": 134,
+        "rating": 4.8
     },
     {
         "name": "Белый клык",
         "releaseDateBook": 2014,
         "image": "whiteFang.jpg",
         "author": "Джек Лондон",
-        "amount": 22
+        "amount": 22,
+        "genre": "повесть",
+        "price": 651,
+        "rating": 4.6
     },
     {
         "name": "Мисс Черити",
         "releaseDateBook": 2018,
         "image": "missCharity.jpg",
         "author": "Мари-Од Мюрай",
-        "amount": 4
+        "amount": 4,
+        "genre": "повесть",
+        "price": 455,
+        "rating": 4.5
     },
     {
         "name": "Волшебник Изумрудного города",
         "releaseDateBook": 2019,
         "image": "wizardOz.jpg",
         "author": "Александр Волков",
-        "amount": 26
+        "amount": 26,
+        "genre": "повесть",
+        "price": 264,
+        "rating": 4.2
     },
     {
         "name": "Наваждения (сборник)",
         "releaseDateBook": 2020,
         "image": "delusions.jpg",
         "author": "Макс Фрай",
-        "amount": 7
+        "amount": 7,
+        "genre": "фэнтези",
+        "price": 864,
+        "rating": 4.5
     },
     {
         "name": "Замок Броуди",
         "releaseDateBook": 2016,
         "image": "brodyCastle.jpg",
         "author": "Арчибальд Кронин",
-        "amount": 18
+        "amount": 18,
+        "genre": "роман",
+        "price": 743,
+        "rating": 4.5
     },
     {
         "name": "Королевство гнева и тумана",
         "releaseDateBook": 2021,
         "image": "kingdomWrath.jpg",
         "author": "Сара Дж. Маас",
-        "amount": 9
+        "amount": 9,
+        "genre": "сказка",
+        "price": 745,
+        "rating": 4.2
     },
     {
         "name": "Проклятый горн (сборник)",
         "releaseDateBook": 2014,
         "image": "cursedHorn.jpg",
         "author": "Алексей Пехов",
-        "amount": 4
+        "amount": 4,
+        "genre": "фэнтези",
+        "price": 151,
+        "rating": 3.9
     },
     {
         "name": "Маленький принц",
         "releaseDateBook": 2018,
         "image": "littlePrince.jpg",
         "author": "Антуан де Сент-Экзюпери",
-        "amount": 90
+        "amount": 90,
+        "genre": "философская сказка",
+        "price": 124,
+        "rating": 4.6
     }
 ]
