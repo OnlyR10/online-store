@@ -15,7 +15,20 @@ export default class SortView {
             </select>
         `;
 
-        const select = this.container.querySelector('.tools__sort') as HTMLInputElement;
+        const select = this.container.querySelector('.tools__sort') as HTMLSelectElement;
+
+        const selectKey = this.model.selectKey;
+        const selectMethod = this.model.selectMethod;
+
+        if (selectKey === 'name' && selectMethod === 'asc') {
+            select.options[0].selected = true;
+        } else if (selectKey === 'name' && selectMethod === 'desc') {
+            select.options[1].selected = true;
+        } else if (selectKey === 'releaseDateBook' && selectMethod === 'asc') {
+            select.options[2].selected = true;
+        } else if (selectKey === 'releaseDateBook' && selectMethod === 'desc') {
+            select.options[3].selected = true;
+        }
 
         select.addEventListener('change', (): void => {
             switch (select.value) {

@@ -31,6 +31,18 @@ export default class ModelFilters {
         this.priceEachBook = this.model.books.map((el) => el.price);
         this.filterMinPrice = Math.min(...this.priceEachBook);
         this.filterMaxPrice = Math.max(...this.priceEachBook);
+
+        const userSettingsAsString = localStorage.getItem('userSettings');
+        if (userSettingsAsString) {
+            const storage = JSON.parse(userSettingsAsString);
+            this.filterLeftCarriageAmount = storage.filterLeftCarriageAmount;
+            this.filterRightCarriageAmount = storage.filterRightCarriageAmount;
+            this.filterLeftCarriageAge = storage.filterLeftCarriageAge;
+            this.filterRightCarriageAge = storage.filterRightCarriageAge;
+            this.filterCurrentPrice = storage.filterCurrentPrice;
+            this.filterCurrentRating = storage.filterCurrentRating;
+            this.filterGenreValues = storage.filterGenreValues;
+        } else {
             this.filterLeftCarriageAmount = this.filterMinAmount;
             this.filterRightCarriageAmount = this.filterMaxAmount;
             this.filterLeftCarriageAge = this.filterMinAge;
@@ -38,6 +50,9 @@ export default class ModelFilters {
             this.filterCurrentRating = this.MIN_BOOKS_RATING;
             this.filterGenreValues = [false, false, false];
             this.filterCurrentPrice = this.filterMinPrice;
+        }
+    }
+
     filterByQuantity(values: number[]): void {
         [this.filterLeftCarriageAmount, this.filterRightCarriageAmount] = [...values];
         this.model.all();

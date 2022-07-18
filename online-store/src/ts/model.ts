@@ -15,11 +15,22 @@ export default class Model {
     constructor(private bookLibrary: IBook[]) {
         this._books = this.bookLibrary;
 
+        const userSettingsAsString = localStorage.getItem('userSettings');
+        if (userSettingsAsString) {
+            const storage = JSON.parse(userSettingsAsString);
+            this.selectKey = storage.selectKey;
+            this.selectMethod = storage.selectMethod;
+            this._basket = storage.basket;
+            this.basketFull = storage.basketFull;
+            this.searchMatch = storage.searchMatch;
+        } else {
             this.selectKey = 'name';
             this.selectMethod = 'asc';
             this._basket = [];
             this.basketFull = false;
             this.searchMatch = true;
+        }
+
         this.inputValue = '';
         this.modelFilters = new ModelFilters(this);
         this.all();
@@ -132,24 +143,23 @@ export default class Model {
         );
     }
 
-    search(inputValue: string): void {
-        const allBooks: IBook[] = this.bookLibrary;
-        if (!inputValue) {
-            this._books = allBooks;
-        } else {
-            this._books = allBooks.filter((el: IBook): boolean =>
-                el.name.toLowerCase().includes(inputValue.toLowerCase())
-            );
-        }
-        this.searchMatch = Boolean(this._books.length);
-        if (this.selectKey && this.selectMethod) {
-            this.sort(this.selectKey, this.selectMethod);
-        } else {
-            document.dispatchEvent(
-                new CustomEvent('ModelUpdate', {
-                    detail: 'search',
-                })
-            );
-        }
+    saveToLocalStorage() {
+        localStorage.setItem(
+            'userSettings',
+            JSON.stringify({
+                selectKey: this.selectKey,
+                selectMethod: this.selectMethod,
+                basketFull: this.basketFull,
+                searchMatch: this.searchMatch,
+                filterLeftCarriageAmount: this.modelFilters.filterLeftCarriageAmount,
+                filterRightCarriageAmount: this.modelFilters.filterRightCarriageAmount,
+                filterLeftCarriageAge: this.modelFilters.filterLeftCarriageAge,
+                filterRightCarriageAge: this.modelFilters.filterRightCarriageAge,
+                filterCurrentPrice: this.modelFilters.filterCurrentPrice,
+                filterCurrentRating: this.modelFilters.filterCurrentRating,
+                filterGenreValues: this.modelFilters.filterGenreValues,
+                basket: this.basket,
+            })
+        );
     }
 }
