@@ -6,9 +6,6 @@
     grid-template-columns: 20vw 1fr 20vw;
     grid-template-areas: 'reset input sort';
 }
-
-.tools__reset-storage {
-    grid-area: reset;
 }
 
 .tools__search-container {
