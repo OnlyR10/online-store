@@ -1,66 +1,61 @@
 .filter {
     grid-area: filter;
-    height: 100%;
-    border: 1px solid blue;
-    padding: 20px;
+    height: fit-content;
+    padding: 3rem 3rem;
+    box-sizing: border-box;
+    text-align: center;
+    position: sticky;
+    top: 0;
 }
 
-// .filter__range {
-//     width: 100%;
-//     height: auto;
-// }
-// .filter__value {
-//     width: 100%;
-//     height: auto;
-// }
-.filter__reset {
-}
-.filter__range-amount {
-    width: 80%;
-    margin: 60px 20px;
-}
-.filter__range-age {
-    width: 80%;
-    margin: 60px 20px;
-}
-
-.filter__rating-container {
-    // display: flex;
-}
-
-.rating-info {
-}
-
-.rating-container {
-    display: flex;
-}
-
-.checkbox-info {
-}
-
-.rating-checkbox {
-}
-
+.filter__range-container,
+.filter__rating-container,
 .filter__price-container {
+    margin-bottom: 4rem;
 }
 
+.filter__range,
+.filter__value {
+    width: 100%;
+    height: auto;
+}
+
+.range-info,
+.rating-info,
 .price-info {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 0;
 }
 
+.filter__range-amount,
+.filter__range-age,
+.rating-range,
 .price-range {
-    width: 80%;
-    margin: 60px 20px;
+    margin: 1.8rem;
+    font-size: 1.7rem;
 }
 
 .filter__genre-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 2rem;
 }
 
-.genre-info {
+.genre-container__info {
+    width: 100%;
+    margin: 0;
 }
 
 .genre-container {
     display: flex;
 }
 
+.genre-info {
+    margin-right: 1rem;
+}
+
 .genre-checkbox {
+    width: 2rem;
 }

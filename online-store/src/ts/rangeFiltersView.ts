@@ -9,14 +9,12 @@ export default class RangeFiltersView {
     constructor(public model: Model, public filterContainer: HTMLElement) {
         this.filterContainer.innerHTML = /* HTML */ `
             <div class="filter__range-container">
-                <div class="filter__amount-min"></div>
+                <p class="range-info">По количеству книг</p>
                 <div class="filter__range-amount"></div>
-                <div class="filter__amount-max"></div>
             </div>
             <div class="filter__range-container">
-                <div class="filter__age-min"></div>
+                <p class="range-info">По году выпуска книги</p>
                 <div class="filter__range-age"></div>
-                <div class="filter__age-max"></div>
             </div>
         `;
 

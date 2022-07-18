@@ -23,7 +23,7 @@ export default class ValueFiltersView {
             </div>
 
             <div class="filter__genre-container">
-                <p class="genre-info">По жанру</p>
+                <p class="genre-container__info">По жанру</p>
                 <div class="genre-container">
                     <p class="genre-info">роман</p>
                     <input type="checkbox" name="novel" class="genre-checkbox" />
