@@ -2,24 +2,25 @@
     display: flex;
     justify-content: space-between;
     grid-area: footer;
-    height: 10vw;
-    border: 1px solid gold;
+    background-color: #23817a;
+    padding: 1rem 2rem;
+    color: white;
 }
 
 .footer__info {
     align-self: center;
-    width: 10em;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 .footer__autor {
-    color: black;
     text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer__icon {
-    width: 15em;
-    min-height: 5em;
+    width: 15rem;
+    min-height: 5rem;
     background-image: url(https://rs.school/images/rs_school_js.svg);
     background-repeat: no-repeat;
     background-position: center;
