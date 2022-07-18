@@ -14,4 +14,10 @@
     @include media-mobile {
         padding: 0.5rem 1rem;
     }
+    &:hover {
+        box-shadow: 5px 4px 5px #23817a;
+    }
+    &:active {
+        transform: translate(0, 0.3rem);
+    }
 }

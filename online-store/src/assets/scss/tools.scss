@@ -63,6 +63,9 @@
     @include media-mobile {
         font-size: 2rem;
     }
+    &:hover {
+        background-color: #f1f1f1;
+    }
 }
 
 .tools__cross-button {
@@ -98,5 +101,8 @@
     @include media-mobile {
         height: 100%;
         font-size: 2rem;
+    }
+    &:hover {
+        background-color: #f1f1f1;
     }
 }
