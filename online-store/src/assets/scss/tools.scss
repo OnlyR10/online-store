@@ -1,11 +1,10 @@
 .tools {
     grid-area: tools;
-    height: 4vw;
-    border: 1px solid yellow;
+    padding: 1.5rem 1rem;
     display: grid;
     grid-template-columns: 20vw 1fr 20vw;
-    grid-template-areas: 'reset input sort';
-}
+    grid-template-areas: '. input sort';
+    background-color: #23817a;
 }
 
 .tools__search-container {
@@ -18,18 +17,18 @@
 .tools__search-info {
     grid-area: input;
     font-size: 3rem;
-    font-family: 'Roboto', sans-serif;
-    margin-right: 20px;
+    margin-right: 1rem;
+    color: white;
 }
 
 .tools__icon-container {
-    width: 6%;
-    height: 2.5vw;
-    margin-left: 5px;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
 }
 
 .tools__search-icon {
-    width: 80%;
+    width: 100%;
     height: 100%;
     background-image: url(./assets/icons/search.svg);
     background-position: center;
@@ -39,32 +38,31 @@
 .tools__input-search {
     position: relative;
     width: 60%;
-    height: 2vw;
+    height: 4rem;
     display: flex;
 }
 
 .tools__search {
     width: 100%;
-    height: 100%;
     font-size: 3rem;
-    font-family: 'Roboto', sans-serif;
-    padding: 0 2%;
+    padding: 0 2rem;
     border: 1px solid #616161;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-sizing: border-box;
 }
 
 .tools__cross-button {
     position: absolute;
-    width: 2vw;
-    height: 2vw;
+    width: 3rem;
+    height: 3rem;
     background-image: url(./assets/icons/crossForModal.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     border: 0;
     background-color: transparent;
-    right: 10px;
+    right: 1rem;
+    align-self: center;
 }
 
 .tools__sort-container {
@@ -72,21 +70,15 @@
     justify-self: center;
     align-self: center;
     width: 70%;
-    height: 2vw;
+    height: 4rem;
 }
 
 .tools__sort {
     width: 100%;
-    height: 2vw;
     font-size: 3rem;
-    font-family: 'Roboto', sans-serif;
-    padding: 0 10px;
+    padding: 0 1rem;
     border: 1px solid #616161;
-    border-radius: 10px;
+    border-radius: 1rem;
     text-align: end;
     cursor: pointer;
-}
-
-.tools__sort-item {
-    width: auto;
 }
