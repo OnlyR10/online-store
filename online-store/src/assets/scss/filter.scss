@@ -1,5 +1,66 @@
-#filter {
+.filter {
     grid-area: filter;
     height: 100%;
     border: 1px solid blue;
+    padding: 20px;
+}
+
+// .filter__range {
+//     width: 100%;
+//     height: auto;
+// }
+// .filter__value {
+//     width: 100%;
+//     height: auto;
+// }
+.filter__reset {
+}
+.filter__range-amount {
+    width: 80%;
+    margin: 60px 20px;
+}
+.filter__range-age {
+    width: 80%;
+    margin: 60px 20px;
+}
+
+.filter__rating-container {
+    // display: flex;
+}
+
+.rating-info {
+}
+
+.rating-container {
+    display: flex;
+}
+
+.checkbox-info {
+}
+
+.rating-checkbox {
+}
+
+.filter__price-container {
+}
+
+.price-info {
+}
+
+.price-range {
+    width: 80%;
+    margin: 60px 20px;
+}
+
+.filter__genre-container {
+}
+
+.genre-info {
+}
+
+.genre-container {
+    display: flex;
+}
+
+.genre-checkbox {
 }

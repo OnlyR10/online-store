@@ -1,14 +1,29 @@
 import type { IBook } from './interfaces';
+import filterByActiveGenre from './filterByActiveGenre';
+import ModelFilters from './modelFilters';
 
 export default class Model {
-    private _books: IBook[] = this.bookLibrary;
-    private selectKey: 'name' | 'releaseDateBook' | null = null;
-    private selectMethod: 'asc' | 'desc' | null = null;
-    private _basket: IBook[] = [];
-    public basketFull = false;
-    public searchMatch = true;
+    public modelFilters: ModelFilters;
+    private _books: IBook[];
+    private _basket: IBook[];
+    public basketFull: boolean;
+    public searchMatch: boolean;
+    public selectKey: 'name' | 'releaseDateBook';
+    public selectMethod: 'asc' | 'desc';
+    private inputValue: string;
 
-    constructor(private bookLibrary: IBook[]) {}
+    constructor(private bookLibrary: IBook[]) {
+        this._books = this.bookLibrary;
+
+            this.selectKey = 'name';
+            this.selectMethod = 'asc';
+            this._basket = [];
+            this.basketFull = false;
+            this.searchMatch = true;
+        this.inputValue = '';
+        this.modelFilters = new ModelFilters(this);
+        this.all();
+    }
 
     get books() {
         return this._books.slice();
@@ -19,11 +34,12 @@ export default class Model {
     }
 
     addToBasket(book: IBook) {
-        if (this.basket.length < 2) {
+        if (this.basket.length < 20) {
             this._basket.push(book);
         } else {
             this.basketFull = true;
         }
+        this.saveToLocalStorage();
         document.dispatchEvent(
             new CustomEvent('ModelUpdate', {
                 detail: 'add',
@@ -32,10 +48,12 @@ export default class Model {
     }
 
     removeFromBasket(book: IBook) {
-        if (this.basket.length === 2) {
+        if (this.basket.length === 20) {
             this.basketFull = false;
         }
-        this._basket.splice(this._basket.indexOf(book), 1);
+        const target = this._basket.findIndex((elem) => elem.name === book.name);
+        this._basket.splice(target, 1);
+        this.saveToLocalStorage();
         document.dispatchEvent(
             new CustomEvent('ModelUpdate', {
                 detail: 'remove',
@@ -44,32 +62,72 @@ export default class Model {
     }
 
     sort(key: 'name' | 'releaseDateBook', method: 'asc' | 'desc'): void {
-        if (method === 'asc') {
-            this._books.sort((a: IBook, b: IBook): number => {
-                if (a[key] > b[key]) {
+        this.selectKey = key;
+        this.selectMethod = method;
+        this.all();
+    }
+
+    search(inputValue: string): void {
+        this.inputValue = inputValue;
+        this.all();
+    }
+
+    all() {
+        this.saveToLocalStorage();
+
+        let allBooks: IBook[] = this.bookLibrary;
+
+        allBooks = allBooks.filter(
+            (elem) =>
+                elem.amount >= this.modelFilters.filterLeftCarriageAmount &&
+                elem.amount <= this.modelFilters.filterRightCarriageAmount
+        );
+        allBooks = allBooks.filter(
+            (elem) =>
+                elem.releaseDateBook >= this.modelFilters.filterLeftCarriageAge &&
+                elem.releaseDateBook <= this.modelFilters.filterRightCarriageAge
+        );
+        allBooks = allBooks.filter((elem) => elem.price >= this.modelFilters.filterCurrentPrice);
+
+        allBooks = allBooks.filter((elem) => elem.rating >= this.modelFilters.filterCurrentRating);
+
+        if (this.modelFilters.filterGenreValues.includes(true)) {
+            allBooks = filterByActiveGenre(allBooks, this.modelFilters.filterGenreValues);
+        }
+
+        if (this.inputValue) {
+            allBooks = allBooks.filter((el: IBook): boolean =>
+                el.name.toLowerCase().includes(this.inputValue.toLowerCase())
+            );
+        }
+
+        if (this.selectMethod === 'asc') {
+            allBooks.sort((a: IBook, b: IBook): number => {
+                if (a[this.selectKey] > b[this.selectKey]) {
                     return 1;
-                } else if (a[key] === b[key]) {
+                } else if (a[this.selectKey] === b[this.selectKey]) {
                     return 0;
                 } else {
                     return -1;
                 }
             });
         } else {
-            this._books.sort((a: IBook, b: IBook): number => {
-                if (a[key] < b[key]) {
+            allBooks.sort((a: IBook, b: IBook): number => {
+                if (a[this.selectKey] < b[this.selectKey]) {
                     return 1;
-                } else if (a[key] === b[key]) {
+                } else if (a[this.selectKey] === b[this.selectKey]) {
                     return 0;
                 } else {
                     return -1;
                 }
             });
         }
-        this.selectKey = key;
-        this.selectMethod = method;
+
+        this.searchMatch = Boolean(allBooks.length);
+        this._books = allBooks;
         document.dispatchEvent(
             new CustomEvent('ModelUpdate', {
-                detail: 'sort',
+                detail: null,
             })
         );
     }

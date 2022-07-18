@@ -2,9 +2,11 @@ import BasketView from './basketView';
 import BookLibrary from './bookLibrary';
 import Model from './model';
 import ToolsView from './toolsView';
+import FilterView from './filterView';
 
 export default class View {
     toolsView: ToolsView;
+    filterView: FilterView;
     basketView: BasketView;
     bookLibrary: BookLibrary;
 
@@ -15,9 +17,11 @@ export default class View {
         public basket: HTMLElement,
         public veil: HTMLDivElement,
         public basketFullWarning: HTMLDivElement,
-        public toolsContainer: HTMLTableSectionElement
+        public tools: HTMLTableSectionElement,
+        public filter: HTMLTableSectionElement
     ) {
-        this.toolsView = new ToolsView(this.model, this.toolsContainer);
+        this.toolsView = new ToolsView(this.model, this.tools);
+        this.filterView = new FilterView(this.model, this.filter);
         this.basketView = new BasketView(this.model, this.basket);
         this.bookLibrary = new BookLibrary(this.model, this.main);
     }
@@ -32,9 +36,9 @@ export default class View {
                     this.basketFullWarning.classList.remove('hidden');
                 }
                 this.basketView.update();
+                this.bookLibrary.update();
                 break;
-            case 'sort':
-            case 'search':
+            default:
                 this.bookLibrary.update();
                 break;
         }
