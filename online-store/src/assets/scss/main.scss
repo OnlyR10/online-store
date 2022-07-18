@@ -53,18 +53,26 @@
     &__info-container {
         width: 100%;
         height: 100%;
-        font-size: 2.2rem;
-        list-style-type: none;
         padding: 1rem 3rem;
         margin: 0;
         box-sizing: border-box;
+        @include media-desktop {
+            padding: 1rem 2rem;
+        }
+        @include media-tablet {
+            padding: 1rem 1.5rem;
+        }
     }
+
     &__info-header {
         font-size: 4rem;
         margin: 2rem 0;
         @include media-desktop {
             font-size: 3rem;
             margin: 1rem 0;
+        }
+        @include media-tablet {
+            font-size: 2.5rem;
         }
     }
 
@@ -74,6 +82,9 @@
         @include media-desktop {
             font-size: 2rem;
             margin: 0.5rem 0;
+        }
+        @include media-tablet {
+            font-size: 1.8rem;
         }
     }
 

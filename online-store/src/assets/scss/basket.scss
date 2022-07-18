@@ -20,6 +20,11 @@
             font-size: 3rem;
             margin: 0 0 1rem;
         }
+        @include media-tablet {
+            margin: 0 1rem 1rem;
+            font-size: 2.5rem;
+            padding: 2rem 0 0;
+        }
     }
 
     &-counter {
@@ -31,6 +36,11 @@
             padding: 0 1rem;
             margin: 1rem;
         }
+        @include media-tablet {
+            font-size: 2.5rem;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &-warning {
@@ -40,6 +50,10 @@
             padding: 0 1rem;
             margin: 1rem;
         }
+        @include media-tablet {
+            font-size: 2.5rem;
+            padding: 0;
+        }
     }
 
     &__container {
@@ -48,12 +62,18 @@
         flex-direction: column;
         overflow: auto;
         padding: 0 2rem;
+        @include media-tablet {
+            padding: 0 1rem;
+        }
 
         &-book {
             margin: 2rem 0;
             display: flex;
             @include media-desktop {
                 margin: 1rem 0;
+            }
+            @include media-tablet {
+                margin: 0.8rem 0;
             }
 
             &_remove {
@@ -78,8 +98,12 @@
                 padding-left: 1rem;
                 font-size: 2rem;
                 text-align: start;
+                align-self: center;
                 @include media-desktop {
                     font-size: 1.8rem;
+                }
+                @include media-tablet {
+                    font-size: 1.5rem;
                 }
             }
         }

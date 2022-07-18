@@ -18,10 +18,13 @@ body {
     @include media-desktop {
         grid-template-columns: 25vw 1fr 30vw;
     }
+    @include media-tablet {
+        grid-template-columns: 25vw 1fr 25vw;
+    }
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .fix {
@@ -46,9 +49,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vw;
-    height: 30vw;
+    width: 50%;
+    height: 35%;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    @include media-tablet {
+        height: 30%;
+    }
 }
 
 .warning__cross {
@@ -65,8 +73,10 @@ body {
 }
 
 .warning__info {
-    text-align: center;
-    line-height: 30vw;
     font-size: 4rem;
     font-weight: 700;
+    align-self: center;
+    @include media-tablet {
+        font-size: 3rem;
+    }
 }

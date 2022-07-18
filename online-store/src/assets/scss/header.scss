@@ -9,6 +9,9 @@
 .header__content {
     align-self: center;
     max-width: 70%;
+    @include media-tablet {
+        max-width: 100%;
+    }
 }
 
 .header__greetings {

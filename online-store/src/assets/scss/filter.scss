@@ -9,6 +9,9 @@
     @include media-desktop {
         padding: 2rem 2.5rem;
     }
+    @include media-tablet {
+        padding: 2rem 2rem;
+    }
 }
 
 .filter__range-container,
@@ -35,6 +38,10 @@
     @include media-desktop {
         font-size: 1.8rem;
     }
+    @include media-tablet {
+        font-size: 1.5rem;
+        margin-bottom: 4rem;
+    }
 }
 
 .filter__range-amount,
@@ -46,6 +53,9 @@
     @include media-desktop {
         font-size: 1.5rem;
     }
+    @include media-tablet {
+        font-size: 1.2rem;
+    }
 }
 
 .filter__genre-container {
@@ -55,6 +65,9 @@
     font-size: 2rem;
     @include media-desktop {
         font-size: 1.8rem;
+    }
+    @include media-tablet {
+        font-size: 1.5rem;
     }
 }
 

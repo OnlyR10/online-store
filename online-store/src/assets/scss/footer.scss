@@ -10,6 +10,9 @@
 .footer__info {
     align-self: center;
     font-size: 2rem;
+    @include media-tablet {
+        font-size: 1.8rem;
+    }
 }
 
 .footer__autor {
