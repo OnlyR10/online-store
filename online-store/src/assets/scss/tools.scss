@@ -5,6 +5,10 @@
     grid-template-columns: 20vw 1fr 20vw;
     grid-template-areas: '. input sort';
     background-color: #23817a;
+    @include media-desktop {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'input sort';
+    }
 }
 
 .tools__search-container {

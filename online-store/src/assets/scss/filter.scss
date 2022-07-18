@@ -6,12 +6,18 @@
     text-align: center;
     position: sticky;
     top: 0;
+    @include media-desktop {
+        padding: 2rem 2.5rem;
+    }
 }
 
 .filter__range-container,
 .filter__rating-container,
 .filter__price-container {
     margin-bottom: 4rem;
+    @include media-desktop {
+        margin-bottom: 3rem;
+    }
 }
 
 .filter__range,
@@ -26,6 +32,9 @@
     font-size: 2rem;
     margin-bottom: 5rem;
     margin-top: 0;
+    @include media-desktop {
+        font-size: 1.8rem;
+    }
 }
 
 .filter__range-amount,
@@ -34,6 +43,9 @@
 .price-range {
     margin: 1.8rem;
     font-size: 1.7rem;
+    @include media-desktop {
+        font-size: 1.5rem;
+    }
 }
 
 .filter__genre-container {
@@ -41,6 +53,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 2rem;
+    @include media-desktop {
+        font-size: 1.8rem;
+    }
 }
 
 .genre-container__info {
