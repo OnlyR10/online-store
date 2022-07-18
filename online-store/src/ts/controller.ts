@@ -23,7 +23,7 @@ export default class Controller {
         });
 
         document.addEventListener('ModelUpdate', (event): void => {
-            this.view.update((event as CustomEvent<string>).detail);
+            this.view.update((event as CustomEvent<string | null>).detail);
         });
     }
 }

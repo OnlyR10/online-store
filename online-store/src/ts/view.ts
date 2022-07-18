@@ -26,7 +26,7 @@ export default class View {
         this.bookLibrary = new BookLibrary(this.model, this.main);
     }
 
-    update(eventName: string): void {
+    update(eventName: string | null): void {
         switch (eventName) {
             case 'add':
             case 'remove':
