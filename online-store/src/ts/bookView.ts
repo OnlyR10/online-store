@@ -14,13 +14,13 @@ export default class BookView {
               <img src="${pathToBookImg}${this.book.image}" alt="${this.book.name}" width="200" height="305" class="main__img">
           </div>
           <div class="main__info-container">
-              <h3 class="list__item">${this.book.name}</h3>
-              <p class="list__item">Рейтинг: ${this.book.rating}</p>
-              <p class="list__item">Год издания: ${this.book.releaseDateBook}</p>
-              <p class="list__item">Автор: ${this.book.author}</p>
-              <p class="list__item">Жанр: ${this.book.genre}</p>
-              <p class="list__item">Стоимость в BYN: ${this.book.price}</p>
-              <p class="list__item">Количество книг на складе: ${this.book.amount}</p>
+              <h3 class="list__item main__info-header">${this.book.name}</h3>
+              <p class="list__item main__info-item">Рейтинг: ${this.book.rating}</p>
+              <p class="list__item main__info-item">Год издания: ${this.book.releaseDateBook}</p>
+              <p class="list__item main__info-item">Автор: ${this.book.author}</p>
+              <p class="list__item main__info-item">Жанр: ${this.book.genre}</p>
+              <p class="list__item main__info-item">Стоимость в BYN: ${this.book.price}</p>
+              <p class="list__item main__info-item">Количество книг на складе: ${this.book.amount}</p>
           </div>
       `;
 

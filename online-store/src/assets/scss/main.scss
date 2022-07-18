@@ -1,12 +1,13 @@
 .main {
     grid-area: main;
     display: grid;
-    border: 1px solid black;
-    row-gap: 2em;
-    padding: 1em 3em;
+    row-gap: 4rem;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
 
     &__book-container {
         display: flex;
+        background-color: #f1f1f1;
     }
 
     &__img-container {
@@ -51,12 +52,22 @@
         font-size: 2.2rem;
         font-family: 'Roboto', sans-serif;
         list-style-type: none;
-        padding: 1em;
+        padding: 1rem 3rem;
         margin: 0;
         box-sizing: border-box;
     }
+    &__info-header {
+        font-size: 4rem;
+        margin: 2rem 0;
+    }
+
+    &__info-item {
+        font-size: 2.5rem;
+        margin: 1.5rem 0;
+    }
 
     &__warning {
-        color: red;
+        font-size: 3rem;
+        justify-self: center;
     }
 }
