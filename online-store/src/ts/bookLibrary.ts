@@ -9,13 +9,18 @@ export default class BookLibrary {
 
     addBooksToContainer(books: IBook[]): void {
         for (let i = 0; i < books.length; i = i + 1) {
-            const book: BookView = new BookView(books[i], this.model);
+            let book: BookView;
+            if (this.model.basket.some((elem) => elem.name === books[i].name)) {
+                book = new BookView(books[i], this.model, true);
+            } else {
+                book = new BookView(books[i], this.model, false);
+            }
+
             this.booksContainer.append(book.createBook());
         }
     }
 
     update() {
-        console.log(this.model.searchMatch);
         while (this.booksContainer.lastChild) {
             this.booksContainer.lastChild.remove();
         }
