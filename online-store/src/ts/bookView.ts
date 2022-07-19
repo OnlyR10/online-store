@@ -1,7 +1,7 @@
 import type { IBook } from './interfaces';
 import type Model from './model';
 
-const pathToBookImg = './books/';
+const PATH_TO_BOOK_IMG = './books/';
 
 export default class BookView {
     constructor(private book: IBook, private model: Model, public inBasket: boolean) {}
@@ -11,7 +11,7 @@ export default class BookView {
         container.classList.add('main__book-container');
         container.innerHTML = /* html */ `
           <div class="main__img-container">
-              <img src="${pathToBookImg}${this.book.image}" alt="${this.book.name}" width="200" height="305" class="main__img">
+              <img src="${PATH_TO_BOOK_IMG}${this.book.image}" alt="${this.book.name}" width="200" height="305" class="main__img">
           </div>
           <div class="main__info-container">
               <h3 class="list__item main__info-header">${this.book.name}</h3>
