@@ -1,4 +1,4 @@
-import type { IBook } from '../common/interfaces/interfaces';
+import type { IBook, IUserSettings } from '../common/interfaces/interfaces';
 import filterByActiveGenre from '../common/functions/filterByActiveGenre';
 import ModelFilters from './modelFilters';
 
@@ -16,9 +16,9 @@ export default class Model {
     constructor(private bookLibrary: IBook[]) {
         this._books = this.bookLibrary;
 
-        const userSettingsAsString = localStorage.getItem('userSettings');
+        const userSettingsAsString: string | null = localStorage.getItem('userSettings');
         if (userSettingsAsString) {
-            const storage = JSON.parse(userSettingsAsString);
+            const storage: IUserSettings = JSON.parse(userSettingsAsString);
             this.selectKey = storage.selectKey;
             this.selectMethod = storage.selectMethod;
             this._basket = storage.basket;
@@ -37,15 +37,15 @@ export default class Model {
         this.all();
     }
 
-    get books() {
+    get books(): IBook[] {
         return this._books.slice();
     }
 
-    get basket() {
+    get basket(): IBook[] {
         return this._basket.slice();
     }
 
-    addToBasket(book: IBook) {
+    addToBasket(book: IBook): void {
         if (this.basket.length < this._MAX_SIZE_OF_BASKET) {
             this._basket.push(book);
         } else {
@@ -59,11 +59,11 @@ export default class Model {
         );
     }
 
-    removeFromBasket(book: IBook) {
+    removeFromBasket(book: IBook): void {
         if (this.basket.length === this._MAX_SIZE_OF_BASKET) {
             this.isBasketFull = false;
         }
-        const target = this._basket.findIndex((elem) => elem.name === book.name);
+        const target = this._basket.findIndex((elem: IBook) => elem.name === book.name);
         this._basket.splice(target, 1);
         this.saveToLocalStorage();
         document.dispatchEvent(
@@ -84,37 +84,35 @@ export default class Model {
         this.all();
     }
 
-    all() {
+    all(): void {
         this.saveToLocalStorage();
 
         let allBooks: IBook[] = this.bookLibrary;
 
         allBooks = allBooks.filter(
-            (elem) =>
+            (elem: IBook) =>
                 elem.amount >= this.modelFilters.filterLeftCarriageAmount &&
                 elem.amount <= this.modelFilters.filterRightCarriageAmount
         );
         allBooks = allBooks.filter(
-            (elem) =>
+            (elem: IBook) =>
                 elem.releaseDateBook >= this.modelFilters.filterLeftCarriageAge &&
                 elem.releaseDateBook <= this.modelFilters.filterRightCarriageAge
         );
-        allBooks = allBooks.filter((elem) => elem.price >= this.modelFilters.filterCurrentPrice);
+        allBooks = allBooks.filter((elem: IBook) => elem.price >= this.modelFilters.filterCurrentPrice);
 
-        allBooks = allBooks.filter((elem) => elem.rating >= this.modelFilters.filterCurrentRating);
+        allBooks = allBooks.filter((elem: IBook) => elem.rating >= this.modelFilters.filterCurrentRating);
 
         if (this.modelFilters.filterGenreValues.includes(true)) {
             allBooks = filterByActiveGenre(allBooks, this.modelFilters.filterGenreValues);
         }
 
         if (this.inputValue) {
-            allBooks = allBooks.filter((el: IBook): boolean =>
-                el.name.toLowerCase().includes(this.inputValue.toLowerCase())
-            );
+            allBooks = allBooks.filter((el: IBook) => el.name.toLowerCase().includes(this.inputValue.toLowerCase()));
         }
 
         if (this.selectMethod === 'asc') {
-            allBooks.sort((a: IBook, b: IBook): number => {
+            allBooks.sort((a: IBook, b: IBook) => {
                 if (a[this.selectKey] > b[this.selectKey]) {
                     return 1;
                 } else if (a[this.selectKey] === b[this.selectKey]) {
@@ -124,7 +122,7 @@ export default class Model {
                 }
             });
         } else {
-            allBooks.sort((a: IBook, b: IBook): number => {
+            allBooks.sort((a: IBook, b: IBook) => {
                 if (a[this.selectKey] < b[this.selectKey]) {
                     return 1;
                 } else if (a[this.selectKey] === b[this.selectKey]) {
@@ -145,22 +143,21 @@ export default class Model {
     }
 
     saveToLocalStorage() {
-        localStorage.setItem(
-            'userSettings',
-            JSON.stringify({
-                selectKey: this.selectKey,
-                selectMethod: this.selectMethod,
-                isBasketFull: this.isBasketFull,
-                isSearchMatch: this.isSearchMatch,
-                filterLeftCarriageAmount: this.modelFilters.filterLeftCarriageAmount,
-                filterRightCarriageAmount: this.modelFilters.filterRightCarriageAmount,
-                filterLeftCarriageAge: this.modelFilters.filterLeftCarriageAge,
-                filterRightCarriageAge: this.modelFilters.filterRightCarriageAge,
-                filterCurrentPrice: this.modelFilters.filterCurrentPrice,
-                filterCurrentRating: this.modelFilters.filterCurrentRating,
-                filterGenreValues: this.modelFilters.filterGenreValues,
-                basket: this.basket,
-            })
-        );
+        const userSettings: IUserSettings = {
+            selectKey: this.selectKey,
+            selectMethod: this.selectMethod,
+            isBasketFull: this.isBasketFull,
+            isSearchMatch: this.isSearchMatch,
+            filterLeftCarriageAmount: this.modelFilters.filterLeftCarriageAmount,
+            filterRightCarriageAmount: this.modelFilters.filterRightCarriageAmount,
+            filterLeftCarriageAge: this.modelFilters.filterLeftCarriageAge,
+            filterRightCarriageAge: this.modelFilters.filterRightCarriageAge,
+            filterCurrentPrice: this.modelFilters.filterCurrentPrice,
+            filterCurrentRating: this.modelFilters.filterCurrentRating,
+            filterGenreValues: this.modelFilters.filterGenreValues,
+            basket: this.basket,
+        };
+
+        localStorage.setItem('userSettings', JSON.stringify(userSettings));
     }
 }

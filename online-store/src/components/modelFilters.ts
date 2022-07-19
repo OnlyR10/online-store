@@ -1,4 +1,5 @@
 import type Model from './model';
+import { IUserSettings } from '../common/interfaces/interfaces';
 
 export default class ModelFilters {
     public numberEachBookInLibrary: number[];
@@ -32,9 +33,9 @@ export default class ModelFilters {
         this.filterMinPrice = Math.min(...this.priceEachBook);
         this.filterMaxPrice = Math.max(...this.priceEachBook);
 
-        const userSettingsAsString = localStorage.getItem('userSettings');
+        const userSettingsAsString: string | null = localStorage.getItem('userSettings');
         if (userSettingsAsString) {
-            const storage = JSON.parse(userSettingsAsString);
+            const storage: IUserSettings = JSON.parse(userSettingsAsString);
             this.filterLeftCarriageAmount = storage.filterLeftCarriageAmount;
             this.filterRightCarriageAmount = storage.filterRightCarriageAmount;
             this.filterLeftCarriageAge = storage.filterLeftCarriageAge;
@@ -63,12 +64,12 @@ export default class ModelFilters {
         this.model.all();
     }
 
-    filterByRating(value: number) {
+    filterByRating(value: number): void {
         this.filterCurrentRating = value;
         this.model.all();
     }
 
-    filterByGenre(name: 'novel' | 'drama' | 'fantasy', isCondition: boolean) {
+    filterByGenre(name: 'novel' | 'drama' | 'fantasy', isCondition: boolean): void {
         if (name === 'novel') {
             this.filterGenreValues[0] = isCondition;
         } else if (name === 'drama') {
@@ -79,12 +80,12 @@ export default class ModelFilters {
         this.model.all();
     }
 
-    filterByPrice(value: number) {
+    filterByPrice(value: number): void {
         this.filterCurrentPrice = value;
         this.model.all();
     }
 
-    reset() {
+    reset(): void {
         this.filterLeftCarriageAmount = this.filterMinAmount;
         this.filterRightCarriageAmount = this.filterMaxAmount;
         this.filterLeftCarriageAge = this.filterMinAge;

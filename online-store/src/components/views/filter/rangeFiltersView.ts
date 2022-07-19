@@ -20,7 +20,7 @@ export default class RangeFiltersView {
 
         const rangeAmount = this.filterContainer.querySelector('.filter__range-amount') as HTMLElement;
 
-        const stepRangeAmount = searchStep(
+        const stepRangeAmount: number = searchStep(
             this.model.modelFilters.filterMinAmount,
             this.model.modelFilters.filterMaxAmount,
             this.model.modelFilters.numberEachBookInLibrary
@@ -40,14 +40,14 @@ export default class RangeFiltersView {
             },
         });
 
-        this.sliderRangeAmount.on('change', (values) => {
-            const updateValues = values.map((elem) => Number(elem));
+        this.sliderRangeAmount.on('change', (values: (string | number)[]): void => {
+            const updateValues: number[] = values.map((elem: string | number) => Number(elem));
             this.model.modelFilters.filterByQuantity(updateValues);
         });
 
         const rangeAge = this.filterContainer.querySelector('.filter__range-age') as HTMLElement;
 
-        const stepRangeAge = searchStep(
+        const stepRangeAge: number = searchStep(
             this.model.modelFilters.filterMinAge,
             this.model.modelFilters.filterMaxAge,
             this.model.modelFilters.yearPublicationEachBook
@@ -64,8 +64,8 @@ export default class RangeFiltersView {
             },
         });
 
-        this.sliderRangeAge.on('change', (values) => {
-            const updateValues = values.map((elem) => Number(elem));
+        this.sliderRangeAge.on('change', (values: (string | number)[]): void => {
+            const updateValues: number[] = values.map((elem: string | number) => Number(elem));
             this.model.modelFilters.filterByYear(updateValues);
         });
     }

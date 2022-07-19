@@ -27,22 +27,21 @@ export default class BookView {
         const mainImgContainer = container.querySelector('.main__img-container') as HTMLElement;
 
         if (this.inBasket) {
-            const veil = document.createElement('div');
+            const veil: HTMLElement = document.createElement('div');
             veil.classList.add('main__veil');
-            const cart = document.createElement('div');
+            const cart: HTMLElement = document.createElement('div');
             cart.classList.add('main__cart');
             mainImgContainer.append(veil, cart);
         } else {
-            const veil = document.createElement('div');
+            const veil: HTMLElement = document.createElement('div');
             veil.classList.add('main__veil', 'hidden');
-            const cart = document.createElement('div');
+            const cart: HTMLElement = document.createElement('div');
             cart.classList.add('main__cart', 'hidden');
             mainImgContainer.append(veil, cart);
         }
 
-        container.addEventListener('click', (e) => {
-            // debugger;
-            if (this.model.basket.some((elem) => elem.name === this.book.name)) {
+        container.addEventListener('click', () => {
+            if (this.model.basket.some((elem: IBook) => elem.name === this.book.name)) {
                 this.model.removeFromBasket(this.book);
             } else {
                 this.model.addToBasket(this.book);

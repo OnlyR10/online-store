@@ -10,19 +10,19 @@ export default class Controller {
         public warningCross: HTMLButtonElement,
         public basketFullWarning: HTMLDivElement
     ) {
-        this.veil.addEventListener('click', () => {
+        this.veil.addEventListener('click', (): void => {
             this.body.classList.remove('fix');
             this.veil.classList.remove('veil__darken');
             this.basketFullWarning.classList.add('hidden');
         });
 
-        this.warningCross.addEventListener('click', () => {
+        this.warningCross.addEventListener('click', (): void => {
             this.body.classList.remove('fix');
             this.veil.classList.remove('veil__darken');
             this.basketFullWarning.classList.add('hidden');
         });
 
-        document.addEventListener('ModelUpdate', (event): void => {
+        document.addEventListener('ModelUpdate', (event: Event): void => {
             this.view.update((event as CustomEvent<string | null>).detail);
         });
     }

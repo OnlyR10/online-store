@@ -52,13 +52,13 @@ export default class ValueFiltersView {
             },
         });
 
-        this.sliderRatingRange.on('change', (value) => {
+        this.sliderRatingRange.on('change', (value: (string | number)[]): void => {
             this.model.modelFilters.filterByRating(Number(value));
         });
 
         this.priceRange = this.filterContainer.querySelector('.price-range') as HTMLElement;
 
-        const stepPriceRange = searchStep(
+        const stepPriceRange: number = searchStep(
             this.model.modelFilters.filterMinPrice,
             this.model.modelFilters.filterMaxPrice,
             this.model.modelFilters.priceEachBook
@@ -75,7 +75,7 @@ export default class ValueFiltersView {
             },
         });
 
-        this.sliderPriceRange.on('change', (value) => {
+        this.sliderPriceRange.on('change', (value: (string | number)[]): void => {
             this.model.modelFilters.filterByPrice(Number(value));
         });
 
@@ -90,8 +90,8 @@ export default class ValueFiltersView {
 
         this.genreContainer.addEventListener('change', (event: Event) => {
             const target = event.target as HTMLInputElement;
-            const name = target.getAttribute('name');
-            const isCondition = target.checked;
+            const name: string | null = target.getAttribute('name');
+            const isCondition: boolean = target.checked;
             if (name === 'novel' || name === 'drama' || name === 'fantasy') {
                 this.model.modelFilters.filterByGenre(name, isCondition);
             }

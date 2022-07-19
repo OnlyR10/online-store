@@ -4,8 +4,8 @@ import type Model from '../../model';
 export default class BasketContainerView {
     constructor(public model: Model, public basketContainer: HTMLElement) {}
 
-    addBookToBasket(books: IBook[]) {
-        books.forEach((elem) => {
+    addBookToBasket(books: IBook[]): void {
+        books.forEach((elem: IBook) => {
             const container: HTMLDivElement = document.createElement('div');
             container.classList.add('basket__container-book');
 

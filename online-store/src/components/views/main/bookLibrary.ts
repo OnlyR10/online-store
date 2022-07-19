@@ -8,8 +8,8 @@ export default class BookLibrary {
     }
 
     addBooksToContainer(books: IBook[]): void {
-        books.forEach((elem) => {
-            const inBasket = this.model.basket.some((item) => item.name === elem.name);
+        books.forEach((elem: IBook) => {
+            const inBasket: boolean = this.model.basket.some((item) => item.name === elem.name);
             const book: BookView = new BookView(elem, this.model, inBasket);
 
             this.booksContainer.append(book.createBook());
@@ -23,7 +23,7 @@ export default class BookLibrary {
         if (this.model.isSearchMatch) {
             this.addBooksToContainer(this.model.books);
         } else {
-            const searchWarning = document.createElement('p');
+            const searchWarning: HTMLElement = document.createElement('p');
             searchWarning.classList.add('main__warning');
             searchWarning.textContent = 'Извините, совпадений не обнаружено!';
             this.booksContainer.append(searchWarning);

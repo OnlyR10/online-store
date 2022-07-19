@@ -17,8 +17,8 @@ export default class SortView {
 
         const select = this.container.querySelector('.tools__sort') as HTMLSelectElement;
 
-        const selectKey = this.model.selectKey;
-        const selectMethod = this.model.selectMethod;
+        const selectKey: 'name' | 'releaseDateBook' = this.model.selectKey;
+        const selectMethod: 'desc' | 'asc' = this.model.selectMethod;
 
         if (selectKey === 'name' && selectMethod === 'asc') {
             select.options[0].selected = true;
