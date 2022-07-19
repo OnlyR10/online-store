@@ -91,9 +91,9 @@ export default class ValueFiltersView {
         this.genreContainer.addEventListener('change', (event: Event) => {
             const target = event.target as HTMLInputElement;
             const name = target.getAttribute('name');
-            const condition = target.checked;
+            const isCondition = target.checked;
             if (name === 'novel' || name === 'drama' || name === 'fantasy') {
-                this.model.modelFilters.filterByGenre(name, condition);
+                this.model.modelFilters.filterByGenre(name, isCondition);
             }
         });
     }

@@ -68,13 +68,13 @@ export default class ModelFilters {
         this.model.all();
     }
 
-    filterByGenre(name: 'novel' | 'drama' | 'fantasy', condition: boolean) {
+    filterByGenre(name: 'novel' | 'drama' | 'fantasy', isCondition: boolean) {
         if (name === 'novel') {
-            this.filterGenreValues[0] = condition;
+            this.filterGenreValues[0] = isCondition;
         } else if (name === 'drama') {
-            this.filterGenreValues[1] = condition;
+            this.filterGenreValues[1] = isCondition;
         } else if (name === 'fantasy') {
-            this.filterGenreValues[2] = condition;
+            this.filterGenreValues[2] = isCondition;
         }
         this.model.all();
     }

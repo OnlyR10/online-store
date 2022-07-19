@@ -6,8 +6,8 @@ export default class Model {
     public modelFilters: ModelFilters;
     private _books: IBook[];
     private _basket: IBook[];
-    public basketFull: boolean;
-    public searchMatch: boolean;
+    public isBasketFull: boolean;
+    public isSearchMatch: boolean;
     public selectKey: 'name' | 'releaseDateBook';
     public selectMethod: 'asc' | 'desc';
     private inputValue: string;
@@ -22,14 +22,14 @@ export default class Model {
             this.selectKey = storage.selectKey;
             this.selectMethod = storage.selectMethod;
             this._basket = storage.basket;
-            this.basketFull = storage.basketFull;
-            this.searchMatch = storage.searchMatch;
+            this.isBasketFull = storage.isBasketFull;
+            this.isSearchMatch = storage.isSearchMatch;
         } else {
             this.selectKey = 'name';
             this.selectMethod = 'asc';
             this._basket = [];
-            this.basketFull = false;
-            this.searchMatch = true;
+            this.isBasketFull = false;
+            this.isSearchMatch = true;
         }
 
         this.inputValue = '';
@@ -49,7 +49,7 @@ export default class Model {
         if (this.basket.length < this._MAX_SIZE_OF_BASKET) {
             this._basket.push(book);
         } else {
-            this.basketFull = true;
+            this.isBasketFull = true;
         }
         this.saveToLocalStorage();
         document.dispatchEvent(
@@ -61,7 +61,7 @@ export default class Model {
 
     removeFromBasket(book: IBook) {
         if (this.basket.length === this._MAX_SIZE_OF_BASKET) {
-            this.basketFull = false;
+            this.isBasketFull = false;
         }
         const target = this._basket.findIndex((elem) => elem.name === book.name);
         this._basket.splice(target, 1);
@@ -135,7 +135,7 @@ export default class Model {
             });
         }
 
-        this.searchMatch = Boolean(allBooks.length);
+        this.isSearchMatch = Boolean(allBooks.length);
         this._books = allBooks;
         document.dispatchEvent(
             new CustomEvent('ModelUpdate', {
@@ -150,8 +150,8 @@ export default class Model {
             JSON.stringify({
                 selectKey: this.selectKey,
                 selectMethod: this.selectMethod,
-                basketFull: this.basketFull,
-                searchMatch: this.searchMatch,
+                isBasketFull: this.isBasketFull,
+                isSearchMatch: this.isSearchMatch,
                 filterLeftCarriageAmount: this.modelFilters.filterLeftCarriageAmount,
                 filterRightCarriageAmount: this.modelFilters.filterRightCarriageAmount,
                 filterLeftCarriageAge: this.modelFilters.filterLeftCarriageAge,

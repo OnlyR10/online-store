@@ -20,7 +20,7 @@ export default class BookLibrary {
         while (this.booksContainer.lastChild) {
             this.booksContainer.lastChild.remove();
         }
-        if (this.model.searchMatch) {
+        if (this.model.isSearchMatch) {
             this.addBooksToContainer(this.model.books);
         } else {
             const searchWarning = document.createElement('p');

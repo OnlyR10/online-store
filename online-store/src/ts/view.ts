@@ -30,7 +30,7 @@ export default class View {
         switch (eventName) {
             case 'add':
             case 'remove':
-                if (this.model.basketFull) {
+                if (this.model.isBasketFull) {
                     this.body.classList.add('fix');
                     this.veil.classList.add('veil__darken');
                     this.basketFullWarning.classList.remove('hidden');
