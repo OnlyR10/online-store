@@ -1,5 +1,5 @@
 import BasketContainerView from './basketContainerView';
-import type Model from './model';
+import type Model from '../../model';
 
 export default class BasketView {
     basketContainerView: BasketContainerView;

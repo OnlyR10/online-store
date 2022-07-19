@@ -1,5 +1,5 @@
-import type { IBook } from './interfaces';
-import type Model from './model';
+import type { IBook } from '../../../common/interfaces/interfaces';
+import type Model from '../../model';
 
 const PATH_TO_BOOK_IMG = './books/';
 

@@ -1,8 +1,8 @@
 import './style.scss';
-import Controller from './ts/controller';
-import Model from './ts/model';
-import View from './ts/view';
-import books from './books.json';
+import Controller from './components/controller';
+import Model from './components/model';
+import View from './components/views/view';
+import books from './common/constants/books.json';
 
 const body = document.querySelector('.body') as HTMLBodyElement;
 // const header = document.querySelector('.header') as HTMLHeadElement;

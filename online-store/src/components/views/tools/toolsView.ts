@@ -1,4 +1,4 @@
-import type Model from './model';
+import type Model from '../../model';
 import SearchView from './searchView';
 import SortView from './sortView';
 

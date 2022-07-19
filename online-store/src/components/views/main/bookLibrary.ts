@@ -1,6 +1,6 @@
 import BookView from './bookView';
-import type { IBook } from './interfaces';
-import type Model from './model';
+import type { IBook } from '../../../common/interfaces/interfaces';
+import type Model from '../../model';
 
 export default class BookLibrary {
     constructor(public model: Model, public booksContainer: HTMLDivElement) {

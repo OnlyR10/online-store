@@ -1,4 +1,4 @@
-import type Model from './model';
+import type Model from '../../model';
 
 export default class SortView {
     container: HTMLElement;

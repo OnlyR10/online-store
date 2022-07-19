@@ -1,6 +1,6 @@
-import type Model from './model';
+import type Model from '../../model';
 import noUiSlider from 'nouislider';
-import searchStep from './searchStep';
+import searchStep from '../../../common/functions/searchStep';
 
 export default class RangeFiltersView {
     sliderRangeAmount;

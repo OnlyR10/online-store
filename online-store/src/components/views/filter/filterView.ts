@@ -1,6 +1,6 @@
 import RangeFiltersView from './rangeFiltersView';
 import ValueFiltersView from './valueFiltersView';
-import type Model from './model';
+import type Model from '../../model';
 
 export default class FilterView {
     rangeFiltersView: RangeFiltersView;

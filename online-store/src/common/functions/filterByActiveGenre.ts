@@ -1,4 +1,4 @@
-import type { IBook } from './interfaces';
+import type { IBook } from '../interfaces/interfaces';
 
 export default function filterByActiveGenre(books: IBook[], isConditions: boolean[]): IBook[] {
     const novel = isConditions[0] ? 'роман' : undefined;

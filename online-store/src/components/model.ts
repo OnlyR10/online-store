@@ -1,5 +1,5 @@
-import type { IBook } from './interfaces';
-import filterByActiveGenre from './filterByActiveGenre';
+import type { IBook } from '../common/interfaces/interfaces';
+import filterByActiveGenre from '../common/functions/filterByActiveGenre';
 import ModelFilters from './modelFilters';
 
 export default class Model {

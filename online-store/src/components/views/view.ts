@@ -1,8 +1,8 @@
-import BasketView from './basketView';
-import BookLibrary from './bookLibrary';
-import Model from './model';
-import ToolsView from './toolsView';
-import FilterView from './filterView';
+import BasketView from './basket/basketView';
+import BookLibrary from './main/bookLibrary';
+import Model from '../model';
+import ToolsView from './tools/toolsView';
+import FilterView from './filter/filterView';
 
 export default class View {
     toolsView: ToolsView;
