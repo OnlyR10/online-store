@@ -8,12 +8,12 @@ export default class BookLibrary {
     }
 
     addBooksToContainer(books: IBook[]): void {
-        for (let i = 0; i < books.length; i = i + 1) {
-            const inBasket = this.model.basket.some((elem) => elem.name === books[i].name);
-            const book: BookView = new BookView(books[i], this.model, inBasket);
+        books.forEach((elem) => {
+            const inBasket = this.model.basket.some((item) => item.name === elem.name);
+            const book: BookView = new BookView(elem, this.model, inBasket);
 
             this.booksContainer.append(book.createBook());
-        }
+        });
     }
 
     update() {

@@ -5,7 +5,7 @@ export default class BasketContainerView {
     constructor(public model: Model, public basketContainer: HTMLElement) {}
 
     addBookToBasket(books: IBook[]) {
-        for (let i = 0; i < books.length; i = i + 1) {
+        books.forEach((elem) => {
             const container: HTMLDivElement = document.createElement('div');
             container.classList.add('basket__container-book');
 
@@ -14,7 +14,7 @@ export default class BasketContainerView {
 
             const bookName: HTMLDivElement = document.createElement('div');
             bookName.classList.add('basket__container-book_name');
-            bookName.textContent = `${books[i].name}`;
+            bookName.textContent = `${elem.name}`;
 
             container.append(bookRemove);
             container.append(bookName);
@@ -22,9 +22,9 @@ export default class BasketContainerView {
 
             bookRemove.addEventListener('click', () => {
                 container.remove();
-                this.model.removeFromBasket(books[i]);
+                this.model.removeFromBasket(elem);
             });
-        }
+        });
     }
 
     update() {
