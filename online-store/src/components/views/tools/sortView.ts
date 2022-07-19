@@ -47,6 +47,8 @@ export default class SortView {
                 case 'ageDesc':
                     this.model.sort('releaseDateBook', 'desc');
                     break;
+                default:
+                    throw new Error('Неизвестная сортировка');
             }
         });
     }
