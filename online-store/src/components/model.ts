@@ -34,7 +34,7 @@ export default class Model {
 
         this.inputValue = '';
         this.modelFilters = new ModelFilters(this);
-        this.all();
+        this.getRemainingBooks();
     }
 
     get books(): IBook[] {
@@ -76,15 +76,15 @@ export default class Model {
     sort(key: 'name' | 'releaseDateBook', method: 'asc' | 'desc'): void {
         this.selectKey = key;
         this.selectMethod = method;
-        this.all();
+        this.getRemainingBooks();
     }
 
     search(inputValue: string): void {
         this.inputValue = inputValue;
-        this.all();
+        this.getRemainingBooks();
     }
 
-    all(): void {
+    getRemainingBooks(): void {
         this.saveToLocalStorage();
 
         let allBooks: IBook[] = this.bookLibrary;

@@ -56,17 +56,17 @@ export default class ModelFilters {
 
     filterByQuantity(values: number[]): void {
         [this.filterLeftCarriageAmount, this.filterRightCarriageAmount] = [...values];
-        this.model.all();
+        this.model.getRemainingBooks();
     }
 
     filterByYear(values: number[]): void {
         [this.filterLeftCarriageAge, this.filterRightCarriageAge] = [...values];
-        this.model.all();
+        this.model.getRemainingBooks();
     }
 
     filterByRating(value: number): void {
         this.filterCurrentRating = value;
-        this.model.all();
+        this.model.getRemainingBooks();
     }
 
     filterByGenre(name: 'novel' | 'drama' | 'fantasy', isCondition: boolean): void {
@@ -77,12 +77,12 @@ export default class ModelFilters {
         } else if (name === 'fantasy') {
             this.filterGenreValues[2] = isCondition;
         }
-        this.model.all();
+        this.model.getRemainingBooks();
     }
 
     filterByPrice(value: number): void {
         this.filterCurrentPrice = value;
-        this.model.all();
+        this.model.getRemainingBooks();
     }
 
     reset(): void {
@@ -93,6 +93,6 @@ export default class ModelFilters {
         this.filterCurrentPrice = this.filterMinPrice;
         this.filterCurrentRating = this.MIN_BOOKS_RATING;
         this.filterGenreValues = [false, false, false];
-        this.model.all();
+        this.model.getRemainingBooks();
     }
 }
