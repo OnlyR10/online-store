@@ -11,6 +11,7 @@ export default class Model {
     public selectKey: 'name' | 'releaseDateBook';
     public selectMethod: 'asc' | 'desc';
     private inputValue: string;
+    private _MAX_SIZE_OF_BASKET = 20;
 
     constructor(private bookLibrary: IBook[]) {
         this._books = this.bookLibrary;
@@ -45,7 +46,7 @@ export default class Model {
     }
 
     addToBasket(book: IBook) {
-        if (this.basket.length < 20) {
+        if (this.basket.length < this._MAX_SIZE_OF_BASKET) {
             this._basket.push(book);
         } else {
             this.basketFull = true;
@@ -59,7 +60,7 @@ export default class Model {
     }
 
     removeFromBasket(book: IBook) {
-        if (this.basket.length === 20) {
+        if (this.basket.length === this._MAX_SIZE_OF_BASKET) {
             this.basketFull = false;
         }
         const target = this._basket.findIndex((elem) => elem.name === book.name);
